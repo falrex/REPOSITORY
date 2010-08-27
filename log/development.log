@@ -5484,3 +5484,34 @@ Rendering template within layouts/questions
 Rendering questions/index
   [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
 Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:29:28) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:29:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:29:34) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions]
