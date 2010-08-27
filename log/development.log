@@ -3169,6 +3169,7 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+<<<<<<< HEAD
   [4;35;1mSQL (93.7ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
   [4;35;1mSQL (125.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
@@ -3204,10 +3205,48 @@ Migrating to CreatePublishquizzes (20100826204933)
 Migrating to CreatePractices (20100827055432)
   [4;36;1mSQL (46.9ms)[0m   [0;1mCREATE TABLE `practices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
   [4;35;1mSQL (31.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827055432')[0m
+=======
+  [4;35;1mSQL (203.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (312.5ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100826195637)
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `fname` varchar(255), `lname` varchar(255), `type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195637')[0m
+Migrating to CreateQuizzes (20100826195821)
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE `quizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `date` date, `class_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195821')[0m
+Migrating to CreateQuestions (20100826195912)
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (140.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195912')[0m
+Migrating to CreateSubjects (20100826201026)
+  [4;36;1mSQL (296.9ms)[0m   [0;1mCREATE TABLE `subjects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826201026')[0m
+Migrating to CreateClasses (20100826201110)
+  [4;36;1mSQL (140.6ms)[0m   [0;1mCREATE TABLE `classes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `section` varchar(255), `time` varchar(255), `day` varchar(255), `subject_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826201110')[0m
+Migrating to CreateChoices (20100826203354)
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `value` varchar(255), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203354')[0m
+Migrating to CreateClasslists (20100826203503)
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE `classlists` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `class_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203503')[0m
+Migrating to CreateStudentrecords (20100826203752)
+  [4;36;1mSQL (203.1ms)[0m   [0;1mCREATE TABLE `studentrecords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `quiz_id` int(11), `user_id` int(11), `grade` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203752')[0m
+Migrating to CreatePublishquizzes (20100826204933)
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCREATE TABLE `publishquizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11), `quiz_id` int(11), `status` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826204933')[0m
+Migrating to CreatePractices (20100827055432)
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE TABLE `practices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827055432')[0m
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+<<<<<<< HEAD
   [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `choices`[0m
   [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `choices`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `classes`[0m
@@ -3216,6 +3255,16 @@ Migrating to CreatePractices (20100827055432)
   [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `classlists`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `classlists`[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `classlists`[0m
+=======
+  [4;36;1mSQL (31.2ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `classes`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `classes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `classes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `classlists`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `classlists`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `classlists`[0m
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `practices`[0m
   [4;35;1mSQL (250.0ms)[0m   [0mdescribe `practices`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `practices`[0m
@@ -3223,10 +3272,17 @@ Migrating to CreatePractices (20100827055432)
   [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `publishquizzes`[0m
   [4;35;1mSQL (15.6ms)[0m   [0mSHOW KEYS FROM `publishquizzes`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+<<<<<<< HEAD
   [4;35;1mSQL (0.0ms)[0m   [0mdescribe `questions`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
   [4;35;1mSQL (15.6ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `quizzes`[0m
+=======
+  [4;35;1mSQL (15.6ms)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mdescribe `quizzes`[0m
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `quizzes`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `studentrecords`[0m
   [4;35;1mSQL (15.6ms)[0m   [0mdescribe `studentrecords`[0m
@@ -3241,23 +3297,49 @@ Migrating to CreatePractices (20100827055432)
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:46:00) [GET]
 Rendering login/index
 Completed in 250ms (View: 250, DB: 0) | 200 OK [http://localhost/login]
+=======
+Processing UsersController#index (for 127.0.0.1 at 2010-08-27 10:26:03) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 391ms (View: 391, DB: 0) | 200 OK [http://localhost/users]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing ApplicationController#index (for 127.0.0.1 at 2010-08-27 10:55:07) [GET]
 
 ActionController::RoutingError (No route matches "/quiz" with {:method=>:get}):
   
 
 Rendering rescues/layout (not_found)
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:33:42) [GET]
+  [4;36;1mQuestion Load (31.2ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/questions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:33:45) [GET]
+  [4;35;1mQuestion Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 250ms (View: 187, DB: 16) | 200 OK [http://localhost/questions/new]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#index (for 127.0.0.1 at 2010-08-27 10:55:09) [GET]
   [4;36;1mQuiz Load (0.0ms)[0m   [0;1mSELECT * FROM `quizzes` [0m
 Rendering template within layouts/quizzes
@@ -3272,19 +3354,63 @@ Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 10:55:17) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/new
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#create (for 127.0.0.1 at 2010-08-27 10:33:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo="}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO `questions` (`answer`, `updated_at`, `question`, `created_at`) VALUES(NULL, '2010-08-27 02:33:48', NULL, '2010-08-27 02:33:48')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed in 47ms (DB: 47) | 302 Found [http://localhost/questions]
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 10:33:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (31.2ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 47ms (View: 0, DB: 31) | 200 OK [http://localhost/questions/1]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 Processing QuizzesController#index (for 127.0.0.1 at 2010-08-27 10:56:56) [GET]
   [4;36;1mQuiz Load (0.0ms)[0m   [0;1mSELECT * FROM `quizzes` [0m
 Rendering template within layouts/quizzes
 Rendering quizzes/index
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:33:52) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#destroy (for 127.0.0.1 at 2010-08-27 10:33:56) [DELETE]
+  Parameters: {"authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Destroy (15.6ms)[0m   [0mDELETE FROM `questions` WHERE `id` = 1[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/questions
+Completed in 78ms (DB: 62) | 302 Found [http://localhost/questions/1]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 10:56:57) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3299,19 +3425,44 @@ Processing QuizzesController#index (for 127.0.0.1 at 2010-08-27 10:56:58) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/index
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:33:56) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:35:45) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 10:56:59) [GET]
   [4;35;1mQuiz Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
 Rendering quizzes/new
 Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:36:05) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#create (for 127.0.0.1 at 2010-08-27 10:57:00) [POST]
   Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"few"}, "authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc="}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3331,20 +3482,70 @@ Processing QuizzesController#show (for 127.0.0.1 at 2010-08-27 10:57:00) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/show
 Completed in 31ms (View: 16, DB: 31) | 200 OK [http://localhost/quizzes/1]
+=======
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:36:06) [GET]
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-27 10:36:22) [GET]
+
+SyntaxError (c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:32: syntax error, unexpected '<', expecting kEND
+      <input type=text/>
+       ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:32: syntax error, unexpected '>'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:84: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (31.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:38:52) [GET]
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/new]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#index (for 127.0.0.1 at 2010-08-27 10:57:59) [GET]
   [4;36;1mQuiz Load (0.0ms)[0m   [0;1mSELECT * FROM `quizzes` [0m
 Rendering template within layouts/quizzes
 Rendering quizzes/index
   [4;35;1mQuiz Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/quizzes]
+=======
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:39:17) [GET]
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:39:34) [GET]
+  [4;35;1mQuestion Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions/new]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#destroy (for 127.0.0.1 at 2010-08-27 10:58:11) [DELETE]
   Parameters: {"authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc=", "id"=>"1"}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3354,28 +3555,52 @@ Processing QuizzesController#destroy (for 127.0.0.1 at 2010-08-27 10:58:11) [DEL
   [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
 Redirected to http://localhost:3000/quizzes
 Completed in 47ms (DB: 47) | 302 Found [http://localhost/quizzes/1]
+=======
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:39:47) [GET]
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/new]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#index (for 127.0.0.1 at 2010-08-27 10:58:11) [GET]
   [4;35;1mQuiz Load (0.0ms)[0m   [0mSELECT * FROM `quizzes` [0m
 Rendering template within layouts/quizzes
 Rendering quizzes/index
 Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:39:53) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:06:00) [GET]
   [4;36;1mQuiz Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
 Rendering quizzes/new
 Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 10:39:59) [GET]
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/questions/new]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#create (for 127.0.0.1 at 2010-08-27 11:06:06) [POST]
   Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"Quiz 1"}, "authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc="}
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
@@ -3384,10 +3609,21 @@ Processing QuizzesController#create (for 127.0.0.1 at 2010-08-27 11:06:06) [POST
   [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
 Redirected to http://localhost:3000/quizzes/2
 Completed in 62ms (DB: 62) | 302 Found [http://localhost/quizzes]
+=======
+Processing QuestionsController#create (for 127.0.0.1 at 2010-08-27 10:40:59) [POST]
+  Parameters: {"commit"=>"Add Question", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "question"=>{"answer"=>"Beijing", "question"=>"What is the capital of China?"}}
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO `questions` (`answer`, `updated_at`, `question`, `created_at`) VALUES('Beijing', '2010-08-27 02:40:59', 'What is the capital of China?', '2010-08-27 02:40:59')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/2
+Completed in 62ms (DB: 31) | 302 Found [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#show (for 127.0.0.1 at 2010-08-27 11:06:06) [GET]
   Parameters: {"id"=>"2"}
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
@@ -3395,10 +3631,30 @@ Processing QuizzesController#show (for 127.0.0.1 at 2010-08-27 11:06:06) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/show
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes/2]
+=======
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 10:41:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/2]
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:41:03) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 Processing QuizzesController#edit (for 127.0.0.1 at 2010-08-27 11:06:19) [GET]
   Parameters: {"id"=>"2"}
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
@@ -3406,10 +3662,20 @@ Processing QuizzesController#edit (for 127.0.0.1 at 2010-08-27 11:06:19) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/edit
 Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/quizzes/2/edit]
+=======
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 10:41:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/2]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#update (for 127.0.0.1 at 2010-08-27 11:06:24) [PUT]
   Parameters: {"commit"=>"Update", "quiz"=>{"name"=>"Quiz 2"}, "authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc=", "id"=>"2"}
   [4;35;1mQuiz Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
@@ -3419,10 +3685,19 @@ Processing QuizzesController#update (for 127.0.0.1 at 2010-08-27 11:06:24) [PUT]
   [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
 Redirected to http://localhost:3000/quizzes/2
 Completed in 62ms (DB: 62) | 302 Found [http://localhost/quizzes/2]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:41:09) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#show (for 127.0.0.1 at 2010-08-27 11:06:24) [GET]
   Parameters: {"id"=>"2"}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3430,10 +3705,19 @@ Processing QuizzesController#show (for 127.0.0.1 at 2010-08-27 11:06:24) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/show
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes/2]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:59:12) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#edit (for 127.0.0.1 at 2010-08-27 11:06:27) [GET]
   Parameters: {"id"=>"2"}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3441,10 +3725,32 @@ Processing QuizzesController#edit (for 127.0.0.1 at 2010-08-27 11:06:27) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/edit
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes/2/edit]
+=======
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 10:59:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+
+ActionView::TemplateError (edit_question_url failed to generate from {:controller=>"questions", :action=>"edit", :id=>"What is the capital of China?"}, expected: {:controller=>"questions", :action=>"edit"}, diff: {:id=>"What is the capital of China?"}) on line #2 of app/views/questions/show.html.erb:
+1: 
+2: <%= link_to 'Edit', edit_question_path(@question.question) %> |
+3: <%= link_to 'Back', questions_path %>
+
+    (eval):17:in `edit_question_path'
+    app/views/questions/show.html.erb:2
+    app/controllers/questions_controller.rb:18:in `show'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#update (for 127.0.0.1 at 2010-08-27 11:06:29) [PUT]
   Parameters: {"commit"=>"Update", "quiz"=>{"name"=>"Quiz 2"}, "authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc=", "id"=>"2"}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3453,10 +3759,19 @@ Processing QuizzesController#update (for 127.0.0.1 at 2010-08-27 11:06:29) [PUT]
   [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
 Redirected to http://localhost:3000/quizzes/2
 Completed in 16ms (DB: 0) | 302 Found [http://localhost/quizzes/2]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:00:05) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#show (for 127.0.0.1 at 2010-08-27 11:06:29) [GET]
   Parameters: {"id"=>"2"}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3474,19 +3789,49 @@ Rendering template within layouts/quizzes
 Rendering quizzes/index
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/quizzes]
+=======
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:00:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mQuestion Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+
+ActionView::TemplateError (edit_question_url failed to generate from {:controller=>"questions", :action=>"edit", :id=>"What is the capital of China?"}, expected: {:controller=>"questions", :action=>"edit"}, diff: {:id=>"What is the capital of China?"}) on line #2 of app/views/questions/show.html.erb:
+1: 
+2: <%=h link_to 'Edit', edit_question_path(@question.question) %> |
+3: <%= link_to 'Back', questions_path %>
+
+    (eval):17:in `edit_question_path'
+    app/views/questions/show.html.erb:2
+    app/controllers/questions_controller.rb:18:in `show'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:06:31) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
 Rendering quizzes/new
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:00:50) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#create (for 127.0.0.1 at 2010-08-27 11:06:35) [POST]
   Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"Quiz 3"}, "authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc="}
   [4;35;1mQuiz Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
@@ -3525,10 +3870,95 @@ Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:16:49) [GET]
 Rendering template within layouts/quizzes
 Rendering quizzes/new
 Completed in 31ms (View: 16, DB: 16) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 11:00:51) [GET]
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/new]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#create (for 127.0.0.1 at 2010-08-27 11:01:00) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "question"=>{"answer"=>"Beijing", "question"=>"What is the capital of China?"}}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO `questions` (`answer`, `updated_at`, `question`, `created_at`) VALUES('Beijing', '2010-08-27 03:01:00', 'What is the capital of China?', '2010-08-27 03:01:00')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed in 47ms (DB: 47) | 302 Found [http://localhost/questions]
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:01:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#edit (for 127.0.0.1 at 2010-08-27 11:02:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (15.6ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/edit
+Completed in 78ms (View: 62, DB: 16) | 200 OK [http://localhost/questions/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#update (for 127.0.0.1 at 2010-08-27 11:02:25) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:02:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:02:27) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:03:18) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 31ms (View: 0, DB: 31) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:24:30) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3555,10 +3985,52 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mUser Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+=======
+Processing QuestionsController#edit (for 127.0.0.1 at 2010-08-27 11:03:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/edit
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/questions/1/edit]
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:03:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (15.6ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:05:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:05:20) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:33:07) [GET]
   [4;36;1mQuiz Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3580,10 +4052,51 @@ ActionView::TemplateError (undefined method `all' for Class:Class) on line #9 of
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
+=======
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 11:11:04) [GET]
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/questions/new]
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+Processing QuestionsController#create (for 127.0.0.1 at 2010-08-27 11:11:31) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "question"=>{"answer"=>"Manila", "question"=>"What is the capital of the Philippines?"}}
+  [4;35;1mQuestion Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuestion Create (0.0ms)[0m   [0mINSERT INTO `questions` (`answer`, `updated_at`, `question`, `created_at`) VALUES('Manila', '2010-08-27 03:11:31', 'What is the capital of the Philippines?', '2010-08-27 03:11:31')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/questions/2
+Completed in 47ms (DB: 31) | 302 Found [http://localhost/questions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:11:31) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:11:33) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:33:23) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3601,6 +4114,26 @@ ActionView::TemplateError (undefined method `all' for Class:Class) on line #9 of
     app/views/quizzes/new.html.erb:9
     app/views/quizzes/new.html.erb:3
     app/controllers/quizzes_controller.rb:29:in `new'
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:13:32) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+
+ActionView::TemplateError (undefined method `question' for nil:NilClass) on line #9 of app/views/questions/index.html.erb:
+6: 
+7: <% @questions.each do |question| %>
+8:   <tr>
+9:     <td>Question: <%=h @question.question%></td>
+10:     <td>Answer: <%=h @question.answer%></td>
+11:     <!--<td><%= link_to 'Show', question %></td>-->
+12:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+
+    app/views/questions/index.html.erb:9
+    app/views/questions/index.html.erb:7:in `each'
+    app/views/questions/index.html.erb:7
+    app/controllers/questions_controller.rb:7:in `index'
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.0ms)
@@ -3609,6 +4142,7 @@ Rendering rescues/layout (internal_server_error)
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:33:24) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3626,6 +4160,36 @@ ActionView::TemplateError (undefined method `all' for Class:Class) on line #9 of
     app/views/quizzes/new.html.erb:9
     app/views/quizzes/new.html.erb:3
     app/controllers/quizzes_controller.rb:29:in `new'
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:14:02) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:14:28) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+
+ActionView::TemplateError (undefined method `question' for nil:NilClass) on line #10 of app/views/questions/index.html.erb:
+7: <% @questions.each do |question| %>
+8:   <tr>
+9:     <td>Question: </td>
+10:     <td>Answer: <%=h @question.question%></td>
+11:     <!--<td><%= link_to 'Show', question %></td>-->
+12:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+13:     <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/questions/index.html.erb:10
+    app/views/questions/index.html.erb:7:in `each'
+    app/views/questions/index.html.erb:7
+    app/controllers/questions_controller.rb:7:in `index'
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.0ms)
@@ -3634,6 +4198,7 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:33:28) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3651,6 +4216,26 @@ ActionView::TemplateError (undefined method `all' for Class:Class) on line #9 of
     app/views/quizzes/new.html.erb:9
     app/views/quizzes/new.html.erb:3
     app/controllers/quizzes_controller.rb:29:in `new'
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:14:32) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+
+ActionView::TemplateError (undefined method `question' for nil:NilClass) on line #10 of app/views/questions/index.html.erb:
+7: <% @questions.each do |question| %>
+8:   <tr>
+9:     <td>Question: </td>
+10:     <td>Answer: <%=h @question.question%></td>
+11:     <!--<td><%= link_to 'Show', question %></td>-->
+12:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+13:     <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/questions/index.html.erb:10
+    app/views/questions/index.html.erb:7:in `each'
+    app/views/questions/index.html.erb:7
+    app/controllers/questions_controller.rb:7:in `index'
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.0ms)
@@ -3659,6 +4244,7 @@ Rendering rescues/layout (internal_server_error)
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:33:51) [GET]
   [4;36;1mQuiz Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3917,20 +4503,38 @@ Migrating to CreatePractices (20100827055432)
   [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `users`[0m
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:14:43) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 125ms (View: 125, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:57:07) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
 Rendering quizzes/new
   [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
 Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:16:04) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:57:51) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3938,10 +4542,159 @@ Rendering quizzes/new
   [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
   [4;36;1mSection Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
 Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:18:28) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h question.question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h question.answer ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=h question.answer %></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:58:06) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3949,10 +4702,159 @@ Rendering quizzes/new
   [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
   [4;35;1mSection Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
 Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:19:17) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h @question.question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h @question.answer ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=h @question.answer %></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#create (for 127.0.0.1 at 2010-08-27 11:58:24) [POST]
   Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"1"}, "authenticity_token"=>"kI5kgTWSyojpKRJ7ndrqvwp6P4qylRTaTy0ARHbfsYc="}
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
@@ -3982,10 +4884,309 @@ Rendering template within layouts/quizzes
 Rendering quizzes/index
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/quizzes]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:20:32) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h question.question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h question.answer ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=h question.answer %></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:21:10) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((h answer ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=h answer %></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 11:59:14) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -3993,10 +5194,159 @@ Rendering quizzes/new
   [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` [0m
   [4;36;1mSection Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:21:41) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( question.question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( question.answer ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%= question.answer %></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:02:33) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -4016,12 +5366,159 @@ ActionView::TemplateError (undefined method `_tag' for #<ActionView::Base:0x4935
     app/controllers/quizzes_controller.rb:29:in `new'
 
 Rendered rescues/_trace (140.6ms)
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:22:27) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.question).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.answer).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=question.answer%></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (62.5ms)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:03:23) [GET]
   [4;36;1mQuiz Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -4039,6 +5536,150 @@ ActionView::TemplateError (undefined method `_tag' for #<ActionView::Base:0x4ac1
     app/views/quizzes/new.html.erb:9
     app/views/quizzes/new.html.erb:3
     app/controllers/quizzes_controller.rb:29:in `new'
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:22:45) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...oy, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.question).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.answer).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Destroy, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...oy, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=question.answer%></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Destroy, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 
 Rendered rescues/_trace (46.9ms)
 Rendered rescues/_request_and_response (0.0ms)
@@ -4047,6 +5688,7 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:03:24) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -4066,12 +5708,159 @@ ActionView::TemplateError (undefined method `_tag' for #<ActionView::Base:0x4914
     app/controllers/quizzes_controller.rb:29:in `new'
 
 Rendered rescues/_trace (140.6ms)
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:23:30) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.question).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.answer).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=question.answer%></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (62.5ms)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:03:34) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -4089,6 +5878,150 @@ ActionView::TemplateError (undefined method `label_tag' for #<ActionView::Helper
     app/views/quizzes/new.html.erb:9
     app/views/quizzes/new.html.erb:3
     app/controllers/quizzes_controller.rb:29:in `new'
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:23:40) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.question).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.answer).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=question.answer%></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
 
 Rendered rescues/_trace (62.5ms)
 Rendered rescues/_request_and_response (0.0ms)
@@ -4097,16 +6030,316 @@ Rendering rescues/layout (internal_server_error)
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:03:42) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
 Rendering quizzes/new
   [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
 Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:23:44) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.question).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.answer).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=question.answer%></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:24:24) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+ERROR: compiling _run_erb_app47views47questions47index46html46erb RAISED compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47questions47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Listing questions</h1>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Question</th>\n"
+@output_buffer.concat "    <th>Answer</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "\n"
+ @questions.each do |question| ; @output_buffer.concat "\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.question).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat((question.answer).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Show', question ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Edit', edit_question_path(question) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    <td>"; @output_buffer.concat(( link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "  </tr>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<br />\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'New question', new_question_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/controllers/questions_controller.rb:7:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:159:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:158:in `process_client'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:285:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `initialize'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `new'
+c:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/lib/mongrel.rb:268:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+...te, question, :confirm => 'Are you sure?', :method => :delet...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting ')'
+...t_buffer.concat(( link_to 'New question', new_question_path ...
+                              ^
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: unterminated string meets end of file
+c:/Documents and Settings/student/My Documents/Aptana Studio 3 Workspace/newproj/REPOSITORY/app/views/questions/index.html.erb:22: syntax error, unexpected $end, expecting ')') on line #15 of app/views/questions/index.html.erb:
+12:     <td><%=question.answer%></td>
+13:     <td><%= link_to 'Show', question %></td>
+14:     <td><%= link_to 'Edit', edit_question_path(question) %></td>
+15:     <td><%= link_to 'Delete, question, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/questions/index.html.erb:22:in `compile!'
+    app/controllers/questions_controller.rb:7:in `index'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:04:01) [GET]
   [4;35;1mQuiz Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -4114,10 +6347,19 @@ Rendering quizzes/new
   [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
   [4;35;1mSubject Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
 Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:24:35) [GET]
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
   [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
   [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
 
 
+<<<<<<< HEAD
 Processing QuizzesController#new (for 127.0.0.1 at 2010-08-27 12:04:57) [GET]
   [4;36;1mQuiz Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
 Rendering template within layouts/quizzes
@@ -4136,3 +6378,32 @@ Rendering quizzes/new
   [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
   [4;35;1mSubject Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
 Completed in 31ms (View: 16, DB: 16) | 200 OK [http://localhost/quizzes/new]
+=======
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:29:28) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:29:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:29:34) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions]
+>>>>>>> cabf46cd654b5adf51f4aaadf382f7e31181297b
