@@ -11,6 +11,6 @@ class LoginController < ApplicationController
   
     login= Users.find(:all, :conditions=>"username='"+params[:username]+"'")
     puts login[0].username
-    puts something blah
+    puts something blah2
   end
 end
