@@ -3470,3 +3470,207 @@ Rendering template within layouts/questions
 Rendering questions/index
   [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 10:59:12) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 125ms (View: 109, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 10:59:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+
+ActionView::TemplateError (edit_question_url failed to generate from {:controller=>"questions", :action=>"edit", :id=>"What is the capital of China?"}, expected: {:controller=>"questions", :action=>"edit"}, diff: {:id=>"What is the capital of China?"}) on line #2 of app/views/questions/show.html.erb:
+1: 
+2: <%= link_to 'Edit', edit_question_path(@question.question) %> |
+3: <%= link_to 'Back', questions_path %>
+
+    (eval):17:in `edit_question_path'
+    app/views/questions/show.html.erb:2
+    app/controllers/questions_controller.rb:18:in `show'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:00:05) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:00:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mQuestion Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 2) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+
+ActionView::TemplateError (edit_question_url failed to generate from {:controller=>"questions", :action=>"edit", :id=>"What is the capital of China?"}, expected: {:controller=>"questions", :action=>"edit"}, diff: {:id=>"What is the capital of China?"}) on line #2 of app/views/questions/show.html.erb:
+1: 
+2: <%=h link_to 'Edit', edit_question_path(@question.question) %> |
+3: <%= link_to 'Back', questions_path %>
+
+    (eval):17:in `edit_question_path'
+    app/views/questions/show.html.erb:2
+    app/controllers/questions_controller.rb:18:in `show'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:00:50) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#new (for 127.0.0.1 at 2010-08-27 11:00:51) [GET]
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Rendering template within layouts/questions
+Rendering questions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/new]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#create (for 127.0.0.1 at 2010-08-27 11:01:00) [POST]
+  Parameters: {"commit"=>"Add", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "question"=>{"answer"=>"Beijing", "question"=>"What is the capital of China?"}}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuestion Create (0.0ms)[0m   [0;1mINSERT INTO `questions` (`answer`, `updated_at`, `question`, `created_at`) VALUES('Beijing', '2010-08-27 03:01:00', 'What is the capital of China?', '2010-08-27 03:01:00')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed in 47ms (DB: 47) | 302 Found [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:01:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#edit (for 127.0.0.1 at 2010-08-27 11:02:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (15.6ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/edit
+Completed in 78ms (View: 62, DB: 16) | 200 OK [http://localhost/questions/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#update (for 127.0.0.1 at 2010-08-27 11:02:25) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"MAj9IVyTBU7t20z+WLz1MjfUIu/ynU/7QWAmOO5raxo=", "id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/questions/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:02:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:02:27) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:03:18) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 31ms (View: 0, DB: 31) | 200 OK [http://localhost/questions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#edit (for 127.0.0.1 at 2010-08-27 11:03:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/edit
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/questions/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:03:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (15.6ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#show (for 127.0.0.1 at 2010-08-27 11:05:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mQuestion Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mQuestion Load (0.0ms)[0m   [0mSELECT * FROM `questions` WHERE (`questions`.`id` = 1) [0m
+Rendering template within layouts/questions
+Rendering questions/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/questions/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuestionsController#index (for 127.0.0.1 at 2010-08-27 11:05:20) [GET]
+  [4;36;1mQuestion Load (0.0ms)[0m   [0;1mSELECT * FROM `questions` [0m
+Rendering template within layouts/questions
+Rendering questions/index
+  [4;35;1mQuestion Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/questions]

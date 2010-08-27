@@ -4,6 +4,8 @@
   <%= f.error_messages %>
 
   <p>
+    Question: <%= f.text_field :question%><br /><br />
+    Answer: <%= f.text_field :answer%><br /><br />
     <%= f.submit 'Update' %>
   </p>
 <% end %>
