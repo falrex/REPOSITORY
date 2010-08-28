@@ -1,0 +1,18 @@
+<p>
+  <b>Section:</b>
+  <%=h @section.section %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%=h @section.time %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%=h @section.day %>
+</p>
+
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>
