@@ -21,7 +21,7 @@ development:
   database: RubyQuiz_development
   pool: 5
   username: root
-  password: root
+  password: p@ssw0rd
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -34,7 +34,7 @@ test:
   database: RubyQuiz_test
   pool: 5
   username: root
-  password: root
+  password: p@ssw0rd
   host: localhost
 
 production:
@@ -44,5 +44,5 @@ production:
   database: RubyQuiz_production
   pool: 5
   username: root
-  password: root
+  password: p@ssw0rd
   host: localhost
