@@ -3,13 +3,15 @@ class SectionsController < ApplicationController
   # GET /sections.xml
   def index
     @sections = Section.all
-
+    puts "----" + params[:subject]
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @sections }
     end
   end
+  
 
+  
   # GET /sections/1
   # GET /sections/1.xml
   def show
@@ -35,6 +37,7 @@ class SectionsController < ApplicationController
   # GET /sections/1/edit
   def edit
     @section = Section.find(params[:id])
+    
   end
 
   # POST /sections

@@ -10,7 +10,9 @@ class SubjectsController < ApplicationController
       
     end
   end
+  
 
+  
   # GET /subjects/1
   # GET /subjects/1.xml
   def show
