@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(:version => 20100827055432) do
     t.string   "password"
     t.string   "fname"
     t.string   "lname"
-    t.string   "type"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
