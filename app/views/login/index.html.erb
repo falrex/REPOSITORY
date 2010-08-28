@@ -1,5 +1,6 @@
 <h1>Login</h1>
 <% form_tag :action=>"authenticate" do%>
+<%=flash[:error]%>
 <table>
   <tr>
     <td><%=label_tag "username"%></td>

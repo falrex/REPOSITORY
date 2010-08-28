@@ -3166,3 +3166,861 @@ ActionView::TemplateError (undefined local variable or method `login_path' for #
 Rendered rescues/_trace (72.0ms)
 Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 10:37:40) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+Completed in 58ms (View: 39, DB: 0) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#new (for 127.0.0.1 at 2010-08-27 10:37:43) [GET]
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/subjects
+Rendering subjects/new
+Completed in 55ms (View: 33, DB: 6) | 200 OK [http://localhost/subjects/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#create (for 127.0.0.1 at 2010-08-27 10:37:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "subject"=>{"name"=>"this ", "description"=>"is a test input"}}
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubject Create (16.0ms)[0m   [0;1mINSERT INTO `subjects` (`name`, `updated_at`, `description`, `created_at`) VALUES('this ', '2010-08-27 17:37:48', 'is a test input', '2010-08-27 17:37:48')[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/subjects/1
+Completed in 93ms (DB: 67) | 302 Found [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#show (for 127.0.0.1 at 2010-08-27 10:37:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/subjects
+Rendering subjects/show
+Completed in 47ms (View: 20, DB: 7) | 200 OK [http://localhost/subjects/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 10:37:56) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 37ms (View: 15, DB: 5) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-27 10:39:45) [GET]
+
+SyntaxError (C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/subjects_controller.rb:9: syntax error, unexpected '}', expecting tASSOC
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/subjects_controller.rb:83: syntax error, unexpected kEND, expecting '}'):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (114.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 10:40:21) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 62ms (View: 16, DB: 11) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:45:44) [GET]
+Rendering login/index
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:45:49) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"qe"}
+
+NameError (uninitialized constant LoginController::Users):
+  app/controllers/login_controller.rb:12:in `authenticate'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:46:43) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"qe"}
+
+NameError (uninitialized constant LoginController::Users):
+  app/controllers/login_controller.rb:12:in `authenticate'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:46:47) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"wew"}
+
+NameError (uninitialized constant LoginController::Users):
+  app/controllers/login_controller.rb:12:in `authenticate'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (180.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:47:17) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"wew"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='deecee') [0m
+
+ActionView::MissingTemplate (Missing template login/authenticate.erb in view path app/views):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:47:56) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"wew"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;35;1mUser Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+ActionView::MissingTemplate (Missing template login/authenticate.erb in view path app/views):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:49:05) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>""}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 29ms (DB: 7) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:49:05) [GET]
+Rendering login/index
+Completed in 20ms (View: 17, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:49:30) [GET]
+Rendering login/index
+
+ActionView::TemplateError (undefined method `prints' for #<ActionView::Base:0x8330130>) on line #3 of app/views/login/index.html.erb:
+1: <h1>Login</h1>
+2: <% form_tag :action=>"authenticate" do%>
+3: <%prints flash[:error]%>
+4: <table>
+5:   <tr>
+6:     <td><%=label_tag "username"%></td>
+
+    app/views/login/index.html.erb:3
+    app/views/login/index.html.erb:2
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:49:35) [GET]
+Rendering login/index
+
+ActionView::TemplateError (undefined method `prints' for #<ActionView::Base:0x84f3b28>) on line #3 of app/views/login/index.html.erb:
+1: <h1>Login</h1>
+2: <% form_tag :action=>"authenticate" do%>
+3: <%=prints flash[:error]%>
+4: <table>
+5:   <tr>
+6:     <td><%=label_tag "username"%></td>
+
+    app/views/login/index.html.erb:3
+    app/views/login/index.html.erb:2
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:49:52) [GET]
+Rendering login/index
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:49:56) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"the", "password"=>"wew"}
+  [4;36;1mUser Load (6.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='the') [0m
+
+ActionView::MissingTemplate (Missing template login/authenticate.erb in view path app/views):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:50:08) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>""}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 28ms (DB: 8) | 302 Found [http://localhost/login/authenticate]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 10:50:08) [GET]
+Rendering login/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 10:50:13) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"", "password"=>""}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='') [0m
+
+ActionView::MissingTemplate (Missing template login/authenticate.erb in view path app/views):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:04:18) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"", "password"=>""}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='') [0m
+
+ActionView::MissingTemplate (Missing template login/authenticate.erb in view path app/views):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:04:38) [GET]
+Rendering login/index
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:04:41) [GET]
+Rendering login/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:04:44) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"", "password"=>""}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='') [0m
+
+ActionView::MissingTemplate (Missing template login/authenticate.erb in view path app/views):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#authenticate (for 127.0.0.1 at 2010-08-27 11:05:26) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+
+SyntaxError (C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/login_controller.rb:15: syntax error, unexpected ':', expecting kEND
+      redirect_to :controller=>"users" :action=>"index"
+                                        ^):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:05:37) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 23ms (DB: 5) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:05:37) [GET]
+Rendering login/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:05:42) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 34ms (DB: 8) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:05:42) [GET]
+Rendering login/index
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:08) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 40ms (DB: 8) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:06:09) [GET]
+Rendering login/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:12) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee') [0m
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 29ms (DB: 8) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:06:13) [GET]
+Rendering login/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:16) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"", "password"=>""}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='') [0m
+Redirected to http://localhost:3000/users
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/login/authenticate]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-27 11:06:16) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 87ms (View: 59, DB: 7) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:25) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"claudette", "password"=>"guevarra"}
+  [4;35;1mUser Load (4.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='claudette') [0m
+  [4;36;1mUser Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 40ms (DB: 14) | 302 Found [http://localhost/login/authenticate]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:06:25) [GET]
+Rendering login/index
+Completed in 15ms (View: 7, DB: 5) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:30) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"claudette", "password"=>"guevara"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='claudette') [0m
+  [4;36;1mUser Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/login
+Completed in 34ms (DB: 11) | 302 Found [http://localhost/login/authenticate]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:06:30) [GET]
+Rendering login/index
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:46) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"", "password"=>""}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='') [0m
+Redirected to http://localhost:3000/login
+Completed in 24ms (DB: 1) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:06:46) [GET]
+Rendering login/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:49) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"efw", "password"=>""}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='efw') [0m
+Redirected to http://localhost:3000/login
+Completed in 24ms (DB: 2) | 302 Found [http://localhost/login/authenticate]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 11:06:50) [GET]
+Rendering login/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-27 11:06:54) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"claudette", "password"=>"guevarra"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` WHERE (username='claudette') [0m
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/users
+Completed in 35ms (DB: 7) | 302 Found [http://localhost/login/authenticate]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-27 11:06:54) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 44ms (View: 28, DB: 3) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-27 12:56:11) [GET]
+
+ActionController::RoutingError (No route matches "/subjectd" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 12:56:17) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 74ms (View: 50, DB: 6) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#show (for 127.0.0.1 at 2010-08-27 12:56:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/subjects
+Rendering subjects/show
+Completed in 41ms (View: 17, DB: 7) | 200 OK [http://localhost/subjects/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 12:58:52) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 37ms (View: 16, DB: 6) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:03:29) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #22 of app/views/subjects/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New subject', new_subject_path %> &nbsp <%= link_to 'go to users', user_path %>
+
+    (eval):17:in `user_path'
+    app/views/subjects/index.html.erb:22
+    app/controllers/subjects_controller.rb:7:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (219.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:03:52) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+
+ActionView::TemplateError (undefined local variable or method `show_subject_path' for #<ActionView::Base:0x8a336d8>) on line #22 of app/views/subjects/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New subject', new_subject_path %> &nbsp <%= link_to 'go to users', show_subject_path %>
+
+    app/views/subjects/index.html.erb:22
+    app/controllers/subjects_controller.rb:7:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:04:00) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 54ms (View: 27, DB: 5) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#new (for 127.0.0.1 at 2010-08-27 13:04:02) [GET]
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/subjects
+Rendering subjects/new
+Completed in 186ms (View: 162, DB: 5) | 200 OK [http://localhost/subjects/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:04:09) [GET]
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+
+ActionView::TemplateError (edit_subject_url failed to generate from {:controller=>"subjects", :action=>"edit"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["subjects", :id, "edit"] - are they all satisfied?) on line #22 of app/views/subjects/index.html.erb:
+19: 
+20: <br />
+21: 
+22: <%= link_to 'New subject', new_subject_path %> &nbsp <%= link_to 'go to users', edit_subject_path %>
+
+    (eval):17:in `edit_subject_path'
+    app/views/subjects/index.html.erb:22
+    app/controllers/subjects_controller.rb:7:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (194.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:05:15) [GET]
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 57ms (View: 27, DB: 8) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-27 13:05:18) [GET]
+Rendering login/index
+Completed in 20ms (View: 17, DB: 1) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:05:38) [GET]
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 56ms (View: 27, DB: 11) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-27 13:05:41) [GET]
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 197ms (View: 14, DB: 7) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-27 13:05:44) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 78ms (View: 55, DB: 7) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-27 13:06:36) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mUser Columns (30.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 83ms (View: 34, DB: 31) | 200 OK [http://localhost/users/11/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-27 13:07:16) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mUser Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 46ms (View: 24, DB: 5) | 200 OK [http://localhost/users/11/edit]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-08-27 13:08:42) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mUser Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 11) [0m
+Rendering template within layouts/users
+Rendering users/edit
+Completed in 70ms (View: 43, DB: 8) | 200 OK [http://localhost/users/11/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-27 13:11:08) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+  [4;36;1mUser Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 57ms (View: 34, DB: 6) | 200 OK [http://localhost/users]
