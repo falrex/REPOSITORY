@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-<<<<<<< HEAD
+
   map.resources :subjects
-=======
+
 
   map.resources :quizzes
 
@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :questions
 
   map.resources :questions
->>>>>>> 4bc78aef532407abe6e9fcbe437fa2582ff261f1
+
 
   map.resources :users
 
