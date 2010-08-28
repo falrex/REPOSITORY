@@ -17,11 +17,12 @@ class LoginController < ApplicationController
       
     else
       session[:userid]=login[0].id.to_s
-      if (login[0].category = "Admin")
-        redirect_to :controller=>"users", :action=>"index"
-      elsif (login[0].category = "Teacher")
-        redirect_to :controller=>"users", :action=>"index"
-      elsif (login[0].category = "Student")
+      puts "------------------------"+login[0].category
+      if (login[0].category== "Teacher")
+        redirect_to :controller=>"subjects", :action=>"index"
+      elsif (login[0].category == "Admin")
+        redirect_to :controller=>"users", :action=>"index"        
+      elsif (login[0].category == "Student")
         redirect_to :controller=>"users", :action=>"index"
       end
       

@@ -3,7 +3,7 @@ class SectionsController < ApplicationController
   # GET /sections.xml
   def index
     @sections = Section.all
-    puts "----" + params[:subject]
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @sections }
@@ -27,7 +27,9 @@ class SectionsController < ApplicationController
   # GET /sections/new.xml
   def new
     @section = Section.new
-
+   session[:id]=params[:subject]
+    #@a = Subject.find(params[:subject])
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @section }
@@ -44,7 +46,9 @@ class SectionsController < ApplicationController
   # POST /sections.xml
   def create
     @section = Section.new(params[:section])
-
+    
+    
+    @section.subject_id=session[:id]
     respond_to do |format|
       if @section.save
         format.html { redirect_to(@section, :notice => 'Section was successfully created.') }
@@ -52,8 +56,9 @@ class SectionsController < ApplicationController
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @section.errors, :status => :unprocessable_entity }
-      end
+      end    
     end
+    session[:id] = nil
   end
 
   # PUT /sections/1
