@@ -1,4 +1,4 @@
 class Classlist < ActiveRecord::Base
+  belongs_to:subject
   belongs_to:user
-  belongs_to:section
 end

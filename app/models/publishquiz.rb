@@ -1,4 +1,4 @@
 class Publishquiz < ActiveRecord::Base
-  belongs_to:quiz
   belongs_to:question
+  belongs_to:quiz
 end
