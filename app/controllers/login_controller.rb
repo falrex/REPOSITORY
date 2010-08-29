@@ -23,7 +23,7 @@ class LoginController < ApplicationController
       elsif (login[0].category == "Admin")
         redirect_to :controller=>"users", :action=>"index"        
       elsif (login[0].category == "Student")
-        redirect_to :controller=>"users", :action=>"index"
+        redirect_to :controller=>"studentpage"
       end
       
     end

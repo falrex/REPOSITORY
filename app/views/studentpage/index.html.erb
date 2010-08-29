@@ -1,0 +1,16 @@
+<h1>Studentpage#index</h1>
+<p>Welcome 
+   <%=session[:fname]%>
+</p>
+
+<table>
+  <tr>
+    <td>
+      Class Management
+    </td>  
+    <td>
+      <%= link_to 'Enroll Course', :controller=>"sections"%>
+    </td>
+        
+  </tr>
+</table>
