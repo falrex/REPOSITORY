@@ -5,6 +5,7 @@ class CreateSections < ActiveRecord::Migration
       t.column :time, :string
       t.column :day, :string
       t.column :subject_id ,:integer
+      t.column :user_id ,:integer
       t.timestamps
     end
   end
