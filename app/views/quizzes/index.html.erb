@@ -1,4 +1,13 @@
 <h1>Listing quizzes</h1>
+<p>
+  <%= link_to 'Home', :controller=>"teacherpage" %> -> 
+  <%= link_to "Subjects", :controller=>"subjects" %> -> 
+  <%= link_to flash[:subjectname], :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%> -> 
+  <%if (flash[:sectionname]!=nil)%>
+  <%=flash[:sectionname]+" "%>
+  <%end%>Quizzes
+</p>
+
 
 <table>
   <tr>
@@ -8,8 +17,8 @@
 <% @quizzes.each do |quiz| %>
   <tr>
     <td><%=h quiz.name %></td>
-    <td><%= link_to 'Show', quiz %></td>
-    <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
+    <td><%= link_to 'View Questions', questions_path %></td>
+    <td><%= link_to 'Publish', edit_quiz_path(quiz) %></td>
     <td><%= link_to 'Destroy', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

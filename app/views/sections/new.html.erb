@@ -16,8 +16,8 @@
     <%= f.text_field :day %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Create' %> &nbsp <%= link_to 'Cancel', :controller=>"subjects"%>
+
   </p>
 <% end %>
 
-<%= link_to 'Back', sections_path %>

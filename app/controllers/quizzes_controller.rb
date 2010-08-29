@@ -2,8 +2,19 @@ class QuizzesController < ApplicationController
   # GET /quizzes
   # GET /quizzes.xml
   def index
-    @quizzes = Quiz.all
-
+   
+    if(params[:section]==nil)
+       @quizzes = Quiz.all
+   else
+      session[:sectionid]=params[:section]
+      @quizzes = Quiz.find(:all, :conditions=>"section_id = "+params[:section]+" and status='Open'")
+      #@sections = Section.find(:all,:conditions=>"id = "+@quizzes[0].section_id.to_s)
+      @sections = Section.find(:all,:conditions=>"id = "+params[:section])
+      @subject = Subject.find(:all,:conditions=>"id = "+@sections[0].subject_id.to_s)
+      flash[:subjectname]=@subject[0].name
+      flash[:sectionname]=@sections[0].section
+   end
+   
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @quizzes }
@@ -25,7 +36,7 @@ class QuizzesController < ApplicationController
   # GET /quizzes/new.xml
   def new
     @quiz = Quiz.new
-    session[:id]=params[:section]
+    session[:sectionid]=params[:section]
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @quiz }
@@ -41,7 +52,7 @@ class QuizzesController < ApplicationController
   # POST /quizzes.xml
   def create
     @quiz = Quiz.new(params[:quiz])
-    @quiz.subject_id= session[:id]
+    @quiz.section_id= session[:sectionid]
     @quiz.status = "Open"
     respond_to do |format|
       if @quiz.save
@@ -52,7 +63,7 @@ class QuizzesController < ApplicationController
         format.xml  { render :xml => @quiz.errors, :status => :unprocessable_entity }
       end
     end
-  session[:id]=nil  
+  session[:sectionid]=nil  
   end
 
   # PUT /quizzes/1

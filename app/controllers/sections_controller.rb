@@ -5,7 +5,7 @@ class SectionsController < ApplicationController
    if(params[:subject]==nil)
       @sections = Section.all
    else
-      session[:id]=params[:subject]
+      session[:subjectid]=params[:subject]
       @sections = Section.find(:all, :conditions=>"subject_id = "+params[:subject]+" and user_id = "+session[:userid])
       @subject = Subject.find(:all,:conditions=>"id = "+params[:subject])
       flash[:subjectname]=@subject[0].name
@@ -34,7 +34,7 @@ class SectionsController < ApplicationController
   # GET /sections/new.xml
   def new
     @section = Section.new
-   session[:id]=params[:subject]
+   session[:subjectid]=params[:subject]
     #@a = Subject.find(params[:subject])
     
     respond_to do |format|
@@ -55,7 +55,7 @@ class SectionsController < ApplicationController
     @section = Section.new(params[:section])
     
     @section.user_id=session[:userid]
-    @section.subject_id=session[:id]
+    @section.subject_id=session[:subjectid]
     respond_to do |format|
       if @section.save
         format.html { redirect_to(@section, :notice => 'Section was successfully created.') }
@@ -65,7 +65,7 @@ class SectionsController < ApplicationController
         format.xml  { render :xml => @section.errors, :status => :unprocessable_entity }
       end    
     end
-    session[:id] = nil
+    session[:subjectid] = nil
   end
 
   # PUT /sections/1

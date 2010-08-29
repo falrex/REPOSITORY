@@ -15,8 +15,6 @@
     <!--><%= f.select :name, Subject.all.collect {|p| [ p.name, p.id ] } %><br />-->
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Create' %> &nbsp <%= link_to 'Cancel', :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%>
   </p>
 <% end %>
-
-<%= link_to 'Back', quizzes_path %>
