@@ -25,7 +25,7 @@ class QuizzesController < ApplicationController
   # GET /quizzes/new.xml
   def new
     @quiz = Quiz.new
-
+    session[:id]=params[:section]
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @quiz }
@@ -41,7 +41,8 @@ class QuizzesController < ApplicationController
   # POST /quizzes.xml
   def create
     @quiz = Quiz.new(params[:quiz])
-
+    @quiz.subject_id= session[:id]
+    @quiz.status = "Open"
     respond_to do |format|
       if @quiz.save
         format.html { redirect_to(@quiz, :notice => 'Quiz was successfully created.') }
@@ -51,6 +52,7 @@ class QuizzesController < ApplicationController
         format.xml  { render :xml => @quiz.errors, :status => :unprocessable_entity }
       end
     end
+  session[:id]=nil  
   end
 
   # PUT /quizzes/1

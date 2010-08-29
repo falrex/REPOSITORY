@@ -5214,3 +5214,2476 @@ Rendering template within layouts/sections
 Rendering sections/index
   [4;36;1mSection Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
 Completed in 103ms (View: 26, DB: 24) | 200 OK [http://localhost/sections?subject=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:08:24) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 184ms (View: 67, DB: 9) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:08:27) [GET]
+  Parameters: {"subject"=>"1"}
+
+ActionController::RoutingError (No route matches "/quiz/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:09:19) [GET]
+  Parameters: {"subject"=>"1"}
+
+ActionController::RoutingError (No route matches "/quiz/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:09:28) [GET]
+
+ActionController::RoutingError (No route matches "/quiz" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#index (for 127.0.0.1 at 2010-08-28 21:09:32) [GET]
+  [4;36;1mQuiz Load (1.0ms)[0m   [0;1mSELECT * FROM `quizzes` [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/index
+Completed in 79ms (View: 34, DB: 1) | 200 OK [http://localhost/quizzes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#index (for 127.0.0.1 at 2010-08-28 21:09:55) [GET]
+  [4;35;1mQuiz Load (1.0ms)[0m   [0mSELECT * FROM `quizzes` [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/index
+Completed in 90ms (View: 7, DB: 1) | 200 OK [http://localhost/quizzes]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:10:00) [GET]
+  Parameters: {"subject"=>"1"}
+
+ActionController::RoutingError (No route matches "/quiz/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:10:07) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 68ms (View: 33, DB: 8) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:10:08) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 108ms (View: 73, DB: 15) | 200 OK [http://localhost/quizzes/new?subject=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:12:17) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mQuiz Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 107ms (View: 68, DB: 12) | 200 OK [http://localhost/quizzes/new?subject=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:12:47) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mQuiz Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 797ms (View: 717, DB: 22) | 200 OK [http://localhost/quizzes/new?subject=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:12:51) [GET]
+  [4;35;1mQuiz Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Completed in 99ms (View: 64, DB: 10) | 200 OK [http://localhost/quizzes/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:12:54) [GET]
+  [4;35;1mQuiz Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Completed in 118ms (View: 76, DB: 12) | 200 OK [http://localhost/quizzes/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:13:54) [GET]
+  [4;35;1mQuiz Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Completed in 192ms (View: 137, DB: 13) | 200 OK [http://localhost/quizzes/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#create (for 127.0.0.1 at 2010-08-28 21:14:04) [POST]
+  Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"Practice"}, "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M="}
+  [4;35;1mQuiz Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuiz Create (1.0ms)[0m   [0mINSERT INTO `quizzes` (`name`, `updated_at`, `date`, `subject_id`, `created_at`) VALUES('Practice', '2010-08-29 04:14:04', NULL, NULL, '2010-08-29 04:14:04')[0m
+  [4;36;1mSQL (41.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/quizzes/1
+Completed in 81ms (DB: 48) | 302 Found [http://localhost/quizzes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#show (for 127.0.0.1 at 2010-08-28 21:14:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mQuiz Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mQuiz Load (1.0ms)[0m   [0;1mSELECT * FROM `quizzes` WHERE (`quizzes`.`id` = 1) [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/show
+Completed in 49ms (View: 19, DB: 7) | 200 OK [http://localhost/quizzes/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#index (for 127.0.0.1 at 2010-08-28 21:14:08) [GET]
+  [4;35;1mQuiz Load (0.0ms)[0m   [0mSELECT * FROM `quizzes` [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/index
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Completed in 44ms (View: 15, DB: 6) | 200 OK [http://localhost/quizzes]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:14:20) [GET]
+
+ActionController::RoutingError (No route matches "/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:14:26) [GET]
+  [4;35;1mQuiz Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Completed in 97ms (View: 60, DB: 15) | 200 OK [http://localhost/quizzes/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:15:03) [GET]
+  [4;35;1mQuiz Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (2.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Completed in 167ms (View: 96, DB: 14) | 200 OK [http://localhost/quizzes/new]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:15:11) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Completed in 102ms (View: 49, DB: 13) | 200 OK [http://localhost/sections?subject=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:15:14) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mQuiz Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 93ms (View: 54, DB: 13) | 200 OK [http://localhost/quizzes/new?subject=1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#create (for 127.0.0.1 at 2010-08-28 21:15:19) [POST]
+  Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"wew"}, "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M="}
+  [4;36;1mQuiz Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuiz Create (1.0ms)[0m   [0;1mINSERT INTO `quizzes` (`name`, `updated_at`, `date`, `subject_id`, `created_at`) VALUES('wew', '2010-08-29 04:15:19', NULL, 1, '2010-08-29 04:15:19')[0m
+  [4;35;1mSQL (53.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/quizzes/2
+Completed in 93ms (DB: 62) | 302 Found [http://localhost/quizzes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#show (for 127.0.0.1 at 2010-08-28 21:15:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mQuiz Load (1.0ms)[0m   [0mSELECT * FROM `quizzes` WHERE (`quizzes`.`id` = 2) [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/show
+Completed in 40ms (View: 9, DB: 7) | 200 OK [http://localhost/quizzes/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:15:34) [GET]
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 100ms (View: 63, DB: 11) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:16:25) [GET]
+  [4;36;1mQuiz Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 103ms (View: 72, DB: 10) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:16:27) [GET]
+  [4;36;1mQuiz Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 222ms (View: 185, DB: 12) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:16:31) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mQuiz Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 94ms (View: 60, DB: 13) | 200 OK [http://localhost/quizzes/new?subject=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#create (for 127.0.0.1 at 2010-08-28 21:16:34) [POST]
+  Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"qwerty"}, "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M="}
+  [4;35;1mQuiz Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mQuiz Create (1.0ms)[0m   [0mINSERT INTO `quizzes` (`name`, `updated_at`, `date`, `subject_id`, `created_at`) VALUES('qwerty', '2010-08-29 04:16:34', NULL, 1, '2010-08-29 04:16:34')[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/quizzes/3
+Completed in 80ms (DB: 47) | 302 Found [http://localhost/quizzes]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#show (for 127.0.0.1 at 2010-08-28 21:16:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mQuiz Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mQuiz Load (1.0ms)[0m   [0;1mSELECT * FROM `quizzes` WHERE (`quizzes`.`id` = 3) [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/show
+Completed in 43ms (View: 8, DB: 6) | 200 OK [http://localhost/quizzes/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:16:38) [GET]
+  [4;35;1mQuiz Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Completed in 91ms (View: 54, DB: 12) | 200 OK [http://localhost/quizzes/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:16:54) [GET]
+  Parameters: {"subject"=>"2"}
+  [4;35;1mQuiz Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 92ms (View: 55, DB: 12) | 200 OK [http://localhost/quizzes/new?subject=2]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#create (for 127.0.0.1 at 2010-08-28 21:16:56) [POST]
+  Parameters: {"commit"=>"Create", "quiz"=>{"name"=>"123412"}, "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M="}
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mQuiz Create (0.0ms)[0m   [0;1mINSERT INTO `quizzes` (`name`, `updated_at`, `date`, `subject_id`, `created_at`) VALUES('123412', '2010-08-29 04:16:56', NULL, 2, '2010-08-29 04:16:56')[0m
+  [4;35;1mSQL (53.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/quizzes/4
+Completed in 208ms (DB: 62) | 302 Found [http://localhost/quizzes]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#show (for 127.0.0.1 at 2010-08-28 21:16:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mQuiz Load (1.0ms)[0m   [0mSELECT * FROM `quizzes` WHERE (`quizzes`.`id` = 4) [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/show
+Completed in 41ms (View: 9, DB: 8) | 200 OK [http://localhost/quizzes/4]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#index (for 127.0.0.1 at 2010-08-28 21:16:57) [GET]
+  [4;36;1mQuiz Load (1.0ms)[0m   [0;1mSELECT * FROM `quizzes` [0m
+Rendering template within layouts/quizzes
+Rendering quizzes/index
+  [4;35;1mQuiz Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Completed in 58ms (View: 33, DB: 6) | 200 OK [http://localhost/quizzes]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:17:04) [GET]
+  [4;36;1mQuiz Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 86ms (View: 53, DB: 12) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:17:13) [GET]
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 130ms (View: 85, DB: 12) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:17:15) [GET]
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 149ms (View: 100, DB: 13) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:17:17) [GET]
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 87ms (View: 54, DB: 11) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:17:24) [GET]
+  [4;36;1mQuiz Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+  [4;36;1mSubject Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Completed in 139ms (View: 87, DB: 16) | 200 OK [http://localhost/quizzes/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100826195637)
+Migrating to CreateQuizzes (20100826195821)
+Migrating to CreateQuestions (20100826195912)
+Migrating to CreateSubjects (20100826201026)
+Migrating to CreateClasses (20100826201110)
+Migrating to CreateChoices (20100826203354)
+Migrating to CreateClasslists (20100826203503)
+Migrating to CreateStudentrecords (20100826203752)
+Migrating to CreatePublishquizzes (20100826204933)
+Migrating to CreateSections (20100827034855)
+Migrating to CreatePractices (20100827055432)
+Migrating to CreateFeedbacks (20100828054921)
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `classes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `classes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `classes`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW FIELDS FROM `classlists`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `classlists`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `classlists`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW FIELDS FROM `feedbacks`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `feedbacks`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `feedbacks`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `practices`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mdescribe `practices`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `practices`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `publishquizzes`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mdescribe `publishquizzes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `publishquizzes`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW FIELDS FROM `studentrecords`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `studentrecords`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `studentrecords`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `subjects`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `subjects`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (84.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (240.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100826195637)
+  [4;36;1mSQL (142.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `fname` varchar(255), `lname` varchar(255), `category` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195637')[0m
+Migrating to CreateQuizzes (20100826195821)
+  [4;36;1mSQL (106.0ms)[0m   [0;1mCREATE TABLE `quizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `date` date, `subject_id` int(11), `status` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195821')[0m
+Migrating to CreateQuestions (20100826195912)
+  [4;36;1mSQL (168.0ms)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (25.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195912')[0m
+Migrating to CreateSubjects (20100826201026)
+  [4;36;1mSQL (71.0ms)[0m   [0;1mCREATE TABLE `subjects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826201026')[0m
+Migrating to CreateClasses (20100826201110)
+  [4;36;1mSQL (110.0ms)[0m   [0;1mCREATE TABLE `classes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `section` varchar(255), `time` varchar(255), `day` varchar(255), `subject_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826201110')[0m
+Migrating to CreateChoices (20100826203354)
+  [4;36;1mSQL (73.0ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `value` varchar(255), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (51.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203354')[0m
+Migrating to CreateClasslists (20100826203503)
+  [4;36;1mSQL (89.0ms)[0m   [0;1mCREATE TABLE `classlists` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `subject_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203503')[0m
+Migrating to CreateStudentrecords (20100826203752)
+  [4;36;1mSQL (74.0ms)[0m   [0;1mCREATE TABLE `studentrecords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `quiz_id` int(11), `user_id` int(11), `grade` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (27.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203752')[0m
+Migrating to CreatePublishquizzes (20100826204933)
+  [4;36;1mSQL (89.0ms)[0m   [0;1mCREATE TABLE `publishquizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11), `quiz_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826204933')[0m
+Migrating to CreateSections (20100827034855)
+  [4;36;1mSQL (70.0ms)[0m   [0;1mCREATE TABLE `sections` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `section` varchar(255), `time` varchar(255), `day` varchar(255), `subject_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827034855')[0m
+Migrating to CreatePractices (20100827055432)
+  [4;36;1mSQL (80.0ms)[0m   [0;1mCREATE TABLE `practices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827055432')[0m
+Migrating to CreateFeedbacks (20100828054921)
+  [4;36;1mSQL (107.0ms)[0m   [0;1mCREATE TABLE `feedbacks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `feedback` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (28.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100828054921')[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW FIELDS FROM `classes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `classes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `classes`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW FIELDS FROM `classlists`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `classlists`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `classlists`[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSHOW FIELDS FROM `feedbacks`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `feedbacks`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `feedbacks`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `practices`[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mdescribe `practices`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `practices`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `publishquizzes`[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mdescribe `publishquizzes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `publishquizzes`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSHOW FIELDS FROM `studentrecords`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `studentrecords`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSHOW KEYS FROM `studentrecords`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSQL (23.0ms)[0m   [0;1mdescribe `subjects`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `subjects`[0m
+  [4;36;1mSQL (38.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (21.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-28 21:33:58) [GET]
+Rendering login/index
+Completed in 37ms (View: 34, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-28 21:34:02) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee' and password = 'diego') [0m
+  [4;35;1mUser Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/teacherpage
+Completed in 153ms (DB: 13) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:34:03) [GET]
+Rendering teacherpage/index
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/teacherpage]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:34:05) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+Completed in 78ms (View: 42, DB: 2) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#new (for 127.0.0.1 at 2010-08-28 21:34:11) [GET]
+  [4;35;1mSubject Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/subjects
+Rendering subjects/new
+Completed in 84ms (View: 36, DB: 8) | 200 OK [http://localhost/subjects/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#create (for 127.0.0.1 at 2010-08-28 21:34:15) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "subject"=>{"name"=>"RU", "description"=>""}}
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubject Create (5.0ms)[0m   [0;1mINSERT INTO `subjects` (`name`, `updated_at`, `description`, `created_at`) VALUES('RU', '2010-08-29 04:34:15', '', '2010-08-29 04:34:15')[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/subjects/1
+Completed in 87ms (DB: 55) | 302 Found [http://localhost/subjects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#show (for 127.0.0.1 at 2010-08-28 21:34:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (7.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/subjects
+Rendering subjects/show
+Completed in 54ms (View: 19, DB: 12) | 200 OK [http://localhost/subjects/1]
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#edit (for 127.0.0.1 at 2010-08-28 21:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubject Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/subjects
+Rendering subjects/edit
+Completed in 130ms (View: 74, DB: 14) | 200 OK [http://localhost/subjects/1/edit]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#update (for 127.0.0.1 at 2010-08-28 21:34:24) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "id"=>"1", "subject"=>{"name"=>"RUBYDEV", "description"=>"Ruby on Rails Introduction"}}
+  [4;36;1mSubject Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (2.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSubject Update (1.0ms)[0m   [0mUPDATE `subjects` SET `description` = 'Ruby on Rails Introduction', `updated_at` = '2010-08-29 04:34:24', `name` = 'RUBYDEV' WHERE `id` = 1[0m
+  [4;36;1mSQL (81.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/subjects/1
+Completed in 139ms (DB: 94) | 302 Found [http://localhost/subjects/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#show (for 127.0.0.1 at 2010-08-28 21:34:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSubject Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/subjects
+Rendering subjects/show
+Completed in 45ms (View: 10, DB: 10) | 200 OK [http://localhost/subjects/1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:34:26) [GET]
+  [4;35;1mSubject Load (2.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 57ms (View: 21, DB: 8) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2010-08-28 21:34:28) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mSection Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Rendering template within layouts/sections
+Rendering sections/new
+Completed in 254ms (View: 199, DB: 4) | 200 OK [http://localhost/sections/new?subject=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:34:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"MW", "section"=>"S16"}}
+  [4;36;1mSection Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (4.0ms)[0m   [0;1mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:34:40', '1:00-2:30', 'MW', 1, 1, 'S16', '2010-08-29 04:34:40')[0m
+  [4;35;1mSQL (50.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sections/1
+Completed in 103ms (DB: 62) | 302 Found [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:34:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSection Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 1) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 50ms (View: 21, DB: 8) | 200 OK [http://localhost/sections/1]
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:34:42) [GET]
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Completed in 58ms (View: 33, DB: 15) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:34:45) [GET]
+Rendering teacherpage/index
+Completed in 28ms (View: 11, DB: 1) | 200 OK [http://localhost/teacherpage]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:34:46) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 61ms (View: 16, DB: 10) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (12.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:34:48) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Completed in 75ms (View: 19, DB: 22) | 200 OK [http://localhost/sections?subject=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:35:30) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 209ms (View: 34, DB: 4) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:35:31) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+
+ActionView::TemplateError (undefined local variable or method `subject' for #<ActionView::Base:0x8c8f038>) on line #17 of app/views/sections/index.html.erb:
+14:     <td><%=h section.time %></td>
+15:     <td><%=h section.day %></td>
+16:     <td><%= link_to 'Show', section %></td>
+17:     <td><%= link_to 'Add Quiz', :controller=>"quizzes", :action=>"new",:subject=>subject%></td>
+18:     <td><%= link_to 'Edit', edit_section_path(section) %></td>
+19:     <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/sections/index.html.erb:17
+    app/views/sections/index.html.erb:11:in `each'
+    app/views/sections/index.html.erb:11
+    app/controllers/sections_controller.rb:14:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (130.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:35:38) [GET]
+  [4;36;1mSubject Load (7.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (26.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 74ms (View: 18, DB: 34) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:35:40) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Load (2.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;36;1mSubject Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+
+ActionView::TemplateError (undefined local variable or method `subject' for #<ActionView::Base:0x89fac00>) on line #17 of app/views/sections/index.html.erb:
+14:     <td><%=h section.time %></td>
+15:     <td><%=h section.day %></td>
+16:     <td><%= link_to 'Show', section %></td>
+17:     <td><%= link_to 'Add Quiz', :controller=>"quizzes", :action=>"new",:subject=>subject%></td>
+18:     <td><%= link_to 'Edit', edit_section_path(section) %></td>
+19:     <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
+20:   </tr>
+
+    app/views/sections/index.html.erb:17
+    app/views/sections/index.html.erb:11:in `each'
+    app/views/sections/index.html.erb:11
+    app/controllers/sections_controller.rb:14:in `index'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (85.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW KEYS FROM `schema_migrations`[0m
+  [4;35;1mSQL (261.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100826195637)
+  [4;36;1mSQL (77.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(255), `password` varchar(255), `fname` varchar(255), `lname` varchar(255), `category` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195637')[0m
+Migrating to CreateQuizzes (20100826195821)
+  [4;36;1mSQL (122.0ms)[0m   [0;1mCREATE TABLE `quizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `date` date, `section_id` int(11), `status` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195821')[0m
+Migrating to CreateQuestions (20100826195912)
+  [4;36;1mSQL (86.0ms)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `answer` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826195912')[0m
+Migrating to CreateSubjects (20100826201026)
+  [4;36;1mSQL (75.0ms)[0m   [0;1mCREATE TABLE `subjects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826201026')[0m
+Migrating to CreateClasses (20100826201110)
+  [4;36;1mSQL (86.0ms)[0m   [0;1mCREATE TABLE `classes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `section` varchar(255), `time` varchar(255), `day` varchar(255), `subject_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826201110')[0m
+Migrating to CreateChoices (20100826203354)
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE `choices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `value` varchar(255), `question_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203354')[0m
+Migrating to CreateClasslists (20100826203503)
+  [4;36;1mSQL (64.0ms)[0m   [0;1mCREATE TABLE `classlists` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `subject_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (41.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203503')[0m
+Migrating to CreateStudentrecords (20100826203752)
+  [4;36;1mSQL (160.0ms)[0m   [0;1mCREATE TABLE `studentrecords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `quiz_id` int(11), `user_id` int(11), `grade` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (40.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826203752')[0m
+Migrating to CreatePublishquizzes (20100826204933)
+  [4;36;1mSQL (87.0ms)[0m   [0;1mCREATE TABLE `publishquizzes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11), `quiz_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100826204933')[0m
+Migrating to CreateSections (20100827034855)
+  [4;36;1mSQL (105.0ms)[0m   [0;1mCREATE TABLE `sections` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `section` varchar(255), `time` varchar(255), `day` varchar(255), `subject_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827034855')[0m
+Migrating to CreatePractices (20100827055432)
+  [4;36;1mSQL (98.0ms)[0m   [0;1mCREATE TABLE `practices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (29.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100827055432')[0m
+Migrating to CreateFeedbacks (20100828054921)
+  [4;36;1mSQL (97.0ms)[0m   [0;1mCREATE TABLE `feedbacks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `feedback` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (72.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100828054921')[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW FIELDS FROM `choices`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `choices`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `choices`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSHOW FIELDS FROM `classes`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `classes`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `classes`[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSHOW FIELDS FROM `classlists`[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mdescribe `classlists`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `classlists`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSHOW FIELDS FROM `feedbacks`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `feedbacks`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `feedbacks`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `practices`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `practices`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `practices`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSHOW FIELDS FROM `publishquizzes`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `publishquizzes`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `publishquizzes`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSHOW FIELDS FROM `questions`[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mdescribe `questions`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `questions`[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `quizzes`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `quizzes`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mdescribe `sections`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `sections`[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mSHOW FIELDS FROM `studentrecords`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mdescribe `studentrecords`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `studentrecords`[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mdescribe `subjects`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW KEYS FROM `subjects`[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2010-08-28 21:40:08) [GET]
+Rendering login/index
+Completed in 33ms (View: 29, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-28 21:40:31) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 143ms (View: 34, DB: 6) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-28 21:40:32) [GET]
+  [4;35;1mUser Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/users
+Rendering users/new
+Completed in 68ms (View: 40, DB: 5) | 200 OK [http://localhost/users/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-28 21:40:39) [POST]
+  Parameters: {"user"=>{"category"=>"Student", "username"=>"deecee", "lname"=>"diego", "fname"=>"deecee", "password"=>"diego"}, "commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M="}
+  [4;36;1mUser Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO `users` (`category`, `updated_at`, `username`, `lname`, `fname`, `password`, `created_at`) VALUES('Student', '2010-08-29 04:40:39', 'deecee', 'diego', 'deecee', 'diego', '2010-08-29 04:40:39')[0m
+  [4;35;1mSQL (43.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 225ms (DB: 49) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-28 21:40:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (9.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (3.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 58ms (View: 20, DB: 13) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LoginController#authenticate (for 127.0.0.1 at 2010-08-28 21:40:54) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "username"=>"deecee", "password"=>"diego"}
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (username='deecee' and password = 'diego') [0m
+  [4;35;1mUser Columns (9.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Redirected to http://localhost:3000/teacherpage
+Completed in 48ms (DB: 20) | 302 Found [http://localhost/login/authenticate]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:40:54) [GET]
+Rendering teacherpage/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/teacherpage]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:40:55) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+Completed in 55ms (View: 33, DB: 1) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#new (for 127.0.0.1 at 2010-08-28 21:40:57) [GET]
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/subjects
+Rendering subjects/new
+Completed in 60ms (View: 34, DB: 7) | 200 OK [http://localhost/subjects/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#create (for 127.0.0.1 at 2010-08-28 21:41:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "subject"=>{"name"=>"RUBYDEV", "description"=>"Ruby on Rails Introduction"}}
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSubject Create (1.0ms)[0m   [0;1mINSERT INTO `subjects` (`name`, `updated_at`, `description`, `created_at`) VALUES('RUBYDEV', '2010-08-29 04:41:02', 'Ruby on Rails Introduction', '2010-08-29 04:41:02')[0m
+  [4;35;1mSQL (55.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/subjects/1
+Completed in 105ms (DB: 63) | 302 Found [http://localhost/subjects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#show (for 127.0.0.1 at 2010-08-28 21:41:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mSubject Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (`subjects`.`id` = 1) [0m
+Rendering template within layouts/subjects
+Rendering subjects/show
+Completed in 52ms (View: 18, DB: 8) | 200 OK [http://localhost/subjects/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:41:04) [GET]
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (13.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 58ms (View: 22, DB: 15) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2010-08-28 21:41:05) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Rendering template within layouts/sections
+Rendering sections/new
+Completed in 92ms (View: 47, DB: 7) | 200 OK [http://localhost/sections/new?subject=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:41:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"TH", "section"=>"S13"}}
+  [4;35;1mSection Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (1.0ms)[0m   [0mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:41:12', '1:00-2:30', 'TH', 1, 1, 'S13', '2010-08-29 04:41:12')[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections/1
+Completed in 82ms (DB: 50) | 302 Found [http://localhost/sections]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:41:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 1) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 47ms (View: 19, DB: 7) | 200 OK [http://localhost/sections/1]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:41:14) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;36;1mSection Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Completed in 61ms (View: 30, DB: 11) | 200 OK [http://localhost/sections]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing QuizzesController#new (for 127.0.0.1 at 2010-08-28 21:41:16) [GET]
+  Parameters: {"section"=>"1"}
+  [4;35;1mQuiz Columns (7.0ms)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+Rendering template within layouts/quizzes
+Rendering quizzes/new
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 113ms (View: 75, DB: 28) | 200 OK [http://localhost/quizzes/new?section=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:41:25) [GET]
+Rendering teacherpage/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/teacherpage]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#destroy (for 127.0.0.1 at 2010-08-28 21:46:05) [DELETE]
+  Parameters: {"authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "id"=>"1"}
+  [4;36;1mSection Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Destroy (1.0ms)[0m   [0mDELETE FROM `sections` WHERE `id` = 1[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections
+Completed in 80ms (DB: 55) | 302 Found [http://localhost/sections/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:46:05) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 28ms (View: 6, DB: 2) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:46:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"TH", "section"=>"S13"}}
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (1.0ms)[0m   [0;1mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:46:09', '1:00-2:30', 'TH', 1, 1, 'S13', '2010-08-29 04:46:09')[0m
+  [4;35;1mSQL (26.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sections/2
+Completed in 62ms (DB: 34) | 302 Found [http://localhost/sections]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:46:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSection Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 2) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 38ms (View: 9, DB: 7) | 200 OK [http://localhost/sections/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:46:10) [GET]
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Completed in 42ms (View: 17, DB: 10) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#destroy (for 127.0.0.1 at 2010-08-28 21:46:51) [DELETE]
+  Parameters: {"authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "id"=>"2"}
+  [4;36;1mSection Columns (13.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Destroy (1.0ms)[0m   [0mDELETE FROM `sections` WHERE `id` = 2[0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections
+Completed in 219ms (DB: 66) | 302 Found [http://localhost/sections/2]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:46:51) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 29ms (View: 8, DB: 2) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:46:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"TH", "section"=>"S13"}}
+  [4;36;1mSection Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (1.0ms)[0m   [0;1mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:46:55', '1:00-2:30', 'TH', NULL, 1, 'S13', '2010-08-29 04:46:55')[0m
+  [4;35;1mSQL (33.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sections/3
+Completed in 75ms (DB: 42) | 302 Found [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:46:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSection Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 3) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 48ms (View: 21, DB: 4) | 200 OK [http://localhost/sections/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:46:56) [GET]
+
+ActionController::RoutingError (No route matches "/section" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:47:03) [GET]
+
+ActionController::RoutingError (No route matches "/section" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:47:05) [GET]
+
+ActionController::RoutingError (No route matches "/section" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:47:08) [GET]
+
+ActionController::RoutingError (No route matches "/section" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-28 21:47:11) [GET]
+
+ActionController::RoutingError (No route matches "/section" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:47:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 3) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 54ms (View: 23, DB: 9) | 200 OK [http://localhost/sections/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:47:14) [GET]
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Completed in 42ms (View: 16, DB: 8) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#destroy (for 127.0.0.1 at 2010-08-28 21:47:17) [DELETE]
+  Parameters: {"authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "id"=>"3"}
+  [4;36;1mSection Columns (7.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 3) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Destroy (3.0ms)[0m   [0mDELETE FROM `sections` WHERE `id` = 3[0m
+  [4;36;1mSQL (41.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections
+Completed in 83ms (DB: 60) | 302 Found [http://localhost/sections/3]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:47:18) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 28ms (View: 6, DB: 2) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2010-08-28 21:47:22) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Rendering template within layouts/sections
+Rendering sections/new
+Completed in 61ms (View: 32, DB: 8) | 200 OK [http://localhost/sections/new?subject=1]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:47:30) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"TH", "section"=>"S13"}}
+  [4;35;1mSection Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.0ms)[0m   [0mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:47:30', '1:00-2:30', 'TH', 1, 1, 'S13', '2010-08-29 04:47:30')[0m
+  [4;36;1mSQL (59.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections/4
+Completed in 99ms (DB: 70) | 302 Found [http://localhost/sections]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:47:30) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mSection Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 4) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 38ms (View: 11, DB: 5) | 200 OK [http://localhost/sections/4]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:47:32) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Completed in 47ms (View: 19, DB: 9) | 200 OK [http://localhost/sections]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#destroy (for 127.0.0.1 at 2010-08-28 21:47:57) [DELETE]
+  Parameters: {"authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "id"=>"4"}
+  [4;35;1mSection Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (2.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Destroy (1.0ms)[0m   [0;1mDELETE FROM `sections` WHERE `id` = 4[0m
+  [4;35;1mSQL (95.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sections
+Completed in 130ms (DB: 107) | 302 Found [http://localhost/sections/4]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:47:57) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 28ms (View: 7, DB: 1) | 200 OK [http://localhost/sections]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:47:58) [GET]
+Rendering teacherpage/index
+Completed in 7ms (View: 4, DB: 2) | 200 OK [http://localhost/teacherpage]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:47:59) [GET]
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 46ms (View: 18, DB: 8) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2010-08-28 21:48:00) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mSection Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Rendering template within layouts/sections
+Rendering sections/new
+Completed in 56ms (View: 25, DB: 11) | 200 OK [http://localhost/sections/new?subject=1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:48:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"TH", "section"=>"S13"}}
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.0ms)[0m   [0;1mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:48:05', '1:00-2:30', 'TH', 1, 1, 'S13', '2010-08-29 04:48:05')[0m
+  [4;35;1mSQL (88.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sections/5
+Completed in 127ms (DB: 96) | 302 Found [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:48:05) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 5) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 49ms (View: 20, DB: 6) | 200 OK [http://localhost/sections/5]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:48:43) [GET]
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Completed in 42ms (View: 18, DB: 5) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#destroy (for 127.0.0.1 at 2010-08-28 21:48:45) [DELETE]
+  Parameters: {"authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "id"=>"5"}
+  [4;36;1mSection Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 5) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Destroy (1.0ms)[0m   [0mDELETE FROM `sections` WHERE `id` = 5[0m
+  [4;36;1mSQL (49.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections
+Completed in 82ms (DB: 59) | 302 Found [http://localhost/sections/5]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:48:45) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+Completed in 27ms (View: 7, DB: 1) | 200 OK [http://localhost/sections]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:48:48) [GET]
+Rendering teacherpage/index
+Completed in 8ms (View: 4, DB: 3) | 200 OK [http://localhost/teacherpage]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:48:49) [GET]
+  [4;36;1mSubject Load (0.0ms)[0m   [0;1mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Completed in 44ms (View: 16, DB: 5) | 200 OK [http://localhost/subjects]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2010-08-28 21:48:50) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Rendering template within layouts/sections
+Rendering sections/new
+Completed in 50ms (View: 23, DB: 5) | 200 OK [http://localhost/sections/new?subject=1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:48:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"TH", "section"=>"S13"}}
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSection Create (0.0ms)[0m   [0mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:48:57', '1:00-2:30', 'TH', 1, 1, 'S13', '2010-08-29 04:48:57')[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/sections/6
+Completed in 94ms (DB: 42) | 302 Found [http://localhost/sections]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:48:57) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 47ms (View: 18, DB: 8) | 200 OK [http://localhost/sections/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:48:59) [GET]
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` [0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Completed in 42ms (View: 16, DB: 6) | 200 OK [http://localhost/sections]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:52:22) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (6.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+ERROR: compiling _run_erb_app47views47sections47show46html46erb RAISED compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tIVAR, expecting tASSOC
+...on=>"index", :subject=@section.subject_id ).to_s); @output_b...
+                              ^
+Function body:           def _run_erb_app47views47sections47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Section:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.section ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Time:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.time ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Day:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_section_path(@section) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat((session[:id]).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( link_to 'Back', :controller=>"sections", :action=>"index", :subject=@section.subject_id ).to_s); @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:24:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/sections_controller.rb:27:in `show'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tIVAR, expecting tASSOC
+...on=>"index", :subject=@section.subject_id ).to_s); @output_b...
+                              ^) on line #20 of app/views/sections/show.html.erb:
+17: <%= link_to 'Edit', edit_section_path(@section) %> |
+18: <%=session[:id]%>
+19: 
+20:     <%= link_to 'Back', :controller=>"sections", :action=>"index", :subject=@section.subject_id %>
+
+    app/views/sections/show.html.erb:24:in `compile!'
+    app/controllers/sections_controller.rb:27:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:52:41) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+ERROR: compiling _run_erb_app47views47sections47show46html46erb RAISED compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject='@section.subject_id' ).to_s); ...
+                              ^
+Function body:           def _run_erb_app47views47sections47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Section:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.section ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Time:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.time ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Day:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_section_path(@section) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat((session[:id]).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( link_to 'Back', :controller=>"sections", :action=>"index", :subject='@section.subject_id' ).to_s); @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:24:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/sections_controller.rb:27:in `show'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject='@section.subject_id' ).to_s); ...
+                              ^) on line #20 of app/views/sections/show.html.erb:
+17: <%= link_to 'Edit', edit_section_path(@section) %> |
+18: <%=session[:id]%>
+19: 
+20:     <%= link_to 'Back', :controller=>"sections", :action=>"index", :subject='@section.subject_id' %>
+
+    app/views/sections/show.html.erb:24:in `compile!'
+    app/controllers/sections_controller.rb:27:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (380.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:52:44) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+ERROR: compiling _run_erb_app47views47sections47show46html46erb RAISED compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject='@section.subject_id' ).to_s); ...
+                              ^
+Function body:           def _run_erb_app47views47sections47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Section:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.section ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Time:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.time ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Day:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_section_path(@section) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat((session[:id]).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( link_to 'Back', :controller=>"sections", :action=>"index", :subject='@section.subject_id' ).to_s); @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:24:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/sections_controller.rb:27:in `show'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject='@section.subject_id' ).to_s); ...
+                              ^) on line #20 of app/views/sections/show.html.erb:
+17: <%= link_to 'Edit', edit_section_path(@section) %> |
+18: <%=session[:id]%>
+19: 
+20:     <%= link_to 'Back', :controller=>"sections", :action=>"index", :subject='@section.subject_id' %>
+
+    app/views/sections/show.html.erb:24:in `compile!'
+    app/controllers/sections_controller.rb:27:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:53:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+ERROR: compiling _run_erb_app47views47sections47show46html46erb RAISED compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject=""+@section.subject_id ).to_s);...
+                              ^
+Function body:           def _run_erb_app47views47sections47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Section:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.section ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Time:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.time ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Day:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_section_path(@section) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat((session[:id]).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( link_to 'Back', :controller=>"sections", :action=>"index", :subject=""+@section.subject_id ).to_s); @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:24:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/sections_controller.rb:27:in `show'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject=""+@section.subject_id ).to_s);...
+                              ^) on line #20 of app/views/sections/show.html.erb:
+17: <%= link_to 'Edit', edit_section_path(@section) %> |
+18: <%=session[:id]%>
+19: 
+20:     <%= link_to 'Back', :controller=>"sections", :action=>"index", :subject=""+@section.subject_id %>
+
+    app/views/sections/show.html.erb:24:in `compile!'
+    app/controllers/sections_controller.rb:27:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (558.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:53:19) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (10.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (0.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+ERROR: compiling _run_erb_app47views47sections47show46html46erb RAISED compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject="1").to_s); @output_buffer.conc...
+                              ^
+Function body:           def _run_erb_app47views47sections47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Section:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.section ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Time:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.time ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Day:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @section.day ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( link_to 'Edit', edit_section_path(@section) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat((session[:id]).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( link_to 'Back', :controller=>"sections", :action=>"index", :subject="1").to_s); @output_buffer.concat "\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:24:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/controllers/sections_controller.rb:27:in `show'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/DeeCee/My Documents/Aptana Studio 3 Workspace/RubyQuiz/app/views/sections/show.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting tASSOC
+..., :action=>"index", :subject="1").to_s); @output_buffer.conc...
+                              ^) on line #20 of app/views/sections/show.html.erb:
+17: <%= link_to 'Edit', edit_section_path(@section) %> |
+18: <%=session[:id]%>
+19: 
+20:     <%= link_to 'Back', :controller=>"sections", :action=>"index", :subject="1"%>
+
+    app/views/sections/show.html.erb:24:in `compile!'
+    app/controllers/sections_controller.rb:27:in `show'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (361.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:53:50) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSection Columns (8.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (`sections`.`id` = 6) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 212ms (View: 50, DB: 9) | 200 OK [http://localhost/sections/6]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:53:55) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mSection Load (0.0ms)[0m   [0mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;35;1mSubject Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;36;1mSection Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Completed in 69ms (View: 18, DB: 11) | 200 OK [http://localhost/sections?subject=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing TeacherpageController#index (for 127.0.0.1 at 2010-08-28 21:54:02) [GET]
+Rendering teacherpage/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/teacherpage]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:54:03) [GET]
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 44ms (View: 17, DB: 7) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SubjectsController#index (for 127.0.0.1 at 2010-08-28 21:54:08) [GET]
+  [4;35;1mSubject Load (0.0ms)[0m   [0mSELECT * FROM `subjects` [0m
+Rendering template within layouts/subjects
+Rendering subjects/index
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Completed in 46ms (View: 19, DB: 6) | 200 OK [http://localhost/subjects]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:54:10) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;36;1mSubject Load (1.0ms)[0m   [0;1mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;35;1mSubject Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;36;1mSection Columns (6.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+Completed in 70ms (View: 17, DB: 13) | 200 OK [http://localhost/sections?subject=1]
+  [4;35;1mSQL (1.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#new (for 127.0.0.1 at 2010-08-28 21:54:13) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;35;1mSection Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Rendering template within layouts/sections
+Rendering sections/new
+Completed in 50ms (View: 22, DB: 6) | 200 OK [http://localhost/sections/new?subject=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#create (for 127.0.0.1 at 2010-08-28 21:54:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7+H3wfAY7F3Vt43zayiDUfPwHM8FBzbZzAqj3dbRx8M=", "section"=>{"time"=>"1:00-2:30", "day"=>"MW", "section"=>"S16"}}
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSection Create (0.0ms)[0m   [0;1mINSERT INTO `sections` (`updated_at`, `time`, `day`, `subject_id`, `user_id`, `section`, `created_at`) VALUES('2010-08-29 04:54:25', '1:00-2:30', 'MW', 1, 1, 'S16', '2010-08-29 04:54:25')[0m
+  [4;35;1mSQL (42.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/sections/7
+Completed in 79ms (DB: 49) | 302 Found [http://localhost/sections]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#show (for 127.0.0.1 at 2010-08-28 21:54:25) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mSection Columns (5.0ms)[0m   [0;1mSHOW FIELDS FROM `sections`[0m
+  [4;35;1mSection Load (1.0ms)[0m   [0mSELECT * FROM `sections` WHERE (`sections`.`id` = 7) [0m
+Rendering template within layouts/sections
+Rendering sections/show
+Completed in 36ms (View: 10, DB: 6) | 200 OK [http://localhost/sections/7]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SectionsController#index (for 127.0.0.1 at 2010-08-28 21:54:27) [GET]
+  Parameters: {"subject"=>"1"}
+  [4;36;1mSection Load (1.0ms)[0m   [0;1mSELECT * FROM `sections` WHERE (subject_id = 1 and user_id = 1) [0m
+  [4;35;1mSubject Load (1.0ms)[0m   [0mSELECT * FROM `subjects` WHERE (id = 1) [0m
+  [4;36;1mSubject Columns (4.0ms)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+Rendering template within layouts/sections
+Rendering sections/index
+  [4;35;1mSection Columns (4.0ms)[0m   [0mSHOW FIELDS FROM `sections`[0m
+Completed in 76ms (View: 23, DB: 12) | 200 OK [http://localhost/sections?subject=1]

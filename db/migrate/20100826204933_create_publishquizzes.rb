@@ -3,7 +3,7 @@ class CreatePublishquizzes < ActiveRecord::Migration
     create_table :publishquizzes do |t|
       t.column :question_id, :integer
       t.column :quiz_id, :integer
-      t.column :status, :string
+      
       t.timestamps
     end
   end

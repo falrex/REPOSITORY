@@ -6,8 +6,13 @@
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
-    <%= f.label"Subject"%><br />
-    <%= f.select :name, Subject.all.collect {|p| [ p.name, p.id ] } %><br />
+    
+    <%if (session[:id]==nil)%>
+      <%=f.label"Subject"%>
+      <%=f.select :name, Subject.all.collect {|p| [ p.name, p.id ] }%> 
+    <%end%>
+    
+    <!--><%= f.select :name, Subject.all.collect {|p| [ p.name, p.id ] } %><br />-->
   </p>
   <p>
     <%= f.submit 'Create' %>

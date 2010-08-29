@@ -14,6 +14,7 @@
     <td><%=h section.time %></td>
     <td><%=h section.day %></td>
     <td><%= link_to 'Show', section %></td>
+    <td><%= link_to 'Add Quiz', :controller=>"quizzes", :action=>"new",:section=>section%></td>
     <td><%= link_to 'Edit', edit_section_path(section) %></td>
     <td><%= link_to 'Destroy', section, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
   create_table "publishquizzes", :force => true do |t|
     t.integer  "question_id"
     t.integer  "quiz_id"
-    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,7 +64,8 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
   create_table "quizzes", :force => true do |t|
     t.string   "name"
     t.date     "date"
-    t.integer  "subject_id"
+    t.integer  "section_id"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
     t.string   "password"
     t.string   "fname"
     t.string   "lname"
-    t.string   "type"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
