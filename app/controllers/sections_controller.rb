@@ -47,7 +47,7 @@ class SectionsController < ApplicationController
   def create
     @section = Section.new(params[:section])
     
-    
+    @section.user_id=session[:userid]
     @section.subject_id=session[:id]
     respond_to do |format|
       if @section.save

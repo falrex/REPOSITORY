@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.column :password, :string
       t.column :fname, :string
       t.column :lname, :string
-      t.column :type, :string
+      t.column :category, :string
       t.timestamps
     end
   end
