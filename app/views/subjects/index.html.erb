@@ -10,8 +10,8 @@
   <tr>
     <td><%=h subject.name %></td>
     <td><%=h subject.description %></td>
-    <!---<td><%= link_to 'Show', subject %></td><-->
     <td><%= link_to 'Add class', :controller=>"sections", :action=>"new",:subject=>subject%></td>
+    <td><%= link_to 'View Sections', :controller=>"sections", :action=>"index",:subject=>subject%></td>
     <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
     <td><%= link_to 'Destroy', subject, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

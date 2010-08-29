@@ -2,8 +2,15 @@ class SectionsController < ApplicationController
   # GET /sections
   # GET /sections.xml
   def index
-    @sections = Section.all
-    
+   if(params[:subject]==nil)
+      @sections = Section.all
+   else
+      session[:id]=params[:subject]
+      @sections = Section.find(:all, :conditions=>"subject_id = "+params[:subject]+" and user_id = "+session[:userid])
+      @subject = Subject.find(:all,:conditions=>"id = "+params[:subject])
+      flash[:subjectname]=@subject[0].name
+   end
+   
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @sections }
