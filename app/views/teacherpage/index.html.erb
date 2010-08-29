@@ -1,0 +1,13 @@
+<h1>Teacherpage#index</h1>
+
+<p>Welcome 
+   <%=session[:fname]%>
+</p>
+
+<table>
+  <tr>
+    <td>
+      <%= link_to 'Add class', :controller=>"subjects"%>
+    </td>          
+  </tr>
+</table>

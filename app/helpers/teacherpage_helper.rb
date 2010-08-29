@@ -1,0 +1,2 @@
+module TeacherpageHelper
+end

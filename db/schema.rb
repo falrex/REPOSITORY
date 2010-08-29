@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
   end
 
   create_table "classlists", :force => true do |t|
-    t.integer  "class_id"
+    t.integer  "subject_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
   create_table "quizzes", :force => true do |t|
     t.string   "name"
     t.date     "date"
-    t.integer  "class_id"
+    t.integer  "subject_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
     t.string   "time"
     t.string   "day"
     t.integer  "subject_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -99,7 +100,7 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
     t.string   "password"
     t.string   "fname"
     t.string   "lname"
-    t.string   "category"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
