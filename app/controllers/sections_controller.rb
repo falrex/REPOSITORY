@@ -68,7 +68,7 @@ class SectionsController < ApplicationController
         format.xml  { render :xml => @section.errors, :status => :unprocessable_entity }
       end    
     end
-    session[:subjectid] = nil
+    
   end
 
   # PUT /sections/1
