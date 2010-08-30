@@ -1,13 +1,21 @@
 <h1>New question</h1>
-
+<%=flash[:error ]%>
 <% form_for(@question) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    Question: <%= f.text_field :question%><br /><br />
-    Answer: <%= f.text_field :answer%><br /><br />
-    <%= f.submit 'Add' %>
+    Question Information <br /><br />
+    Question : <%= f.text_field :question%><br /><br />
+    Answer &nbsp : <%= f.text_field :answer%><br /><br />
+    Difficulty : <%= f.select( :difficulty,  { "Easy" => "Easy", "Moderate" => "Moderate", "Hard" => "Hard"}) %><br /><br />
+    
+    Question Choices <br /><br />
+    Choice A: <%=text_field_tag("A")%><br /><br />
+    Choice B: <%=text_field_tag("B")%><br /><br />
+    Choice C: <%=text_field_tag("C")%><br /><br />
+    
+    
+    <%= f.submit 'Add' %> &nbsp<%= link_to 'Back',  :controller=>"questions", :action=>"index", :quiz=>session[:quizid] %>
   </p>
 <% end %>
 
-<%= link_to 'Back', questions_path %>

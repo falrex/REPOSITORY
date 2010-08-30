@@ -8,7 +8,7 @@ class SectionsController < ApplicationController
       session[:subjectid]=params[:subject]
       @sections = Section.find(:all, :conditions=>"subject_id = "+params[:subject]+" and user_id = "+session[:userid])
       @subject = Subject.find(:all,:conditions=>"id = "+params[:subject])
-      flash[:subjectname]=@subject[0].name
+      flash[:subjectname]=@subject[0].name 
    end
    
     respond_to do |format|

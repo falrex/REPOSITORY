@@ -4,11 +4,13 @@
   <%= f.error_messages %>
 
   <p>
-    Question: <%= f.text_field :question%><br /><br />
-    Answer: <%= f.text_field :answer%><br /><br />
+    
+    Question  : <%= f.text_field :question%><br /><br />
+    Answer      : <%= f.text_field :answer%><br /><br />
+    Difficulty: <%= f.select( :difficulty,  { "Easy" => "Easy", "Moderate" => "Moderate", "Hard" => "Hard"}) %>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
 
 <%= link_to 'Show', @question %> |
-<%= link_to 'Back', questions_path %>
+<%= link_to 'Back',  :controller=>"questions", :action=>"index", :quiz=>session[:quizid] %>

@@ -5,7 +5,7 @@
   <%= link_to flash[:subjectname], :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%> -> 
   <%if (flash[:sectionname]!=nil)%>
   <%=flash[:sectionname]+" "%>
-  <%end%>Quizzes
+  <%end%>
 </p>
 
 
@@ -17,9 +17,12 @@
 <% @quizzes.each do |quiz| %>
   <tr>
     <td><%=h quiz.name %></td>
-    <td><%= link_to 'View Questions', questions_path %></td>
+    <td><%= link_to 'Add Questions', :controller=>"questions", :action=>"index", :quiz=>quiz%></td>
+    <%if quiz.status="Unpublished"%>
     <td><%= link_to 'Publish', edit_quiz_path(quiz) %></td>
-    <td><%= link_to 'Destroy', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
+   
   </tr>
 <% end %>
 </table>

@@ -7,12 +7,12 @@ class QuizzesController < ApplicationController
        @quizzes = Quiz.all
    else
       session[:sectionid]=params[:section]
-      @quizzes = Quiz.find(:all, :conditions=>"section_id = "+params[:section]+" and status='Open'")
+      @quizzes = Quiz.find(:all, :conditions=>"section_id = "+params[:section]+" and status='Unpublished'")
       #@sections = Section.find(:all,:conditions=>"id = "+@quizzes[0].section_id.to_s)
       @sections = Section.find(:all,:conditions=>"id = "+params[:section])
       @subject = Subject.find(:all,:conditions=>"id = "+@sections[0].subject_id.to_s)
       flash[:subjectname]=@subject[0].name
-      flash[:sectionname]=@sections[0].section
+      flash[:sectionname]=@sections[0].section + " Quizzes"
    end
    
     respond_to do |format|
@@ -53,7 +53,7 @@ class QuizzesController < ApplicationController
   def create
     @quiz = Quiz.new(params[:quiz])
     @quiz.section_id= session[:sectionid]
-    @quiz.status = "Open"
+    @quiz.status = "Unpublished"
     respond_to do |format|
       if @quiz.save
         format.html { redirect_to(@quiz, :notice => 'Quiz was successfully created.') }
