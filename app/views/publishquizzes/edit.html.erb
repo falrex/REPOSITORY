@@ -1,0 +1,12 @@
+<h1>Editing publishquiz</h1>
+
+<% form_for(@publishquiz) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @publishquiz %> |
+<%= link_to 'Back', publishquizzes_path %>

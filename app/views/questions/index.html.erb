@@ -8,7 +8,7 @@
   <%= link_to flash[:sectionname], :controller=>"quizzes", :action=>"index", :subject=>session[:quizid]%>  -> 
   <%=flash[:subjectname]%>&nbsp Questions
 </p>
-
+ 
 <table>
   <tr>
     <th>Difficulty</th>
@@ -21,13 +21,23 @@
     <td><%=question.difficulty%></td>
     <td><%=question.question%></td>
     <td><%=question.answer%></td>
-    <td><%= link_to 'Add', :controller=>"questions", :action=>"new",:question=>question.id %></td>
- 
+   
+   <%
+   @publishquizzes=Publishquiz.find(:all,:conditions=>"question_id="+question.id.to_s+" and quiz_id="+session[:quizid])
+   if(@publishquizzes.length<=0)
+   %>
+       
+    <td><%= link_to 'Add', :controller=>"teacherpage",:action=>"addquestions",:question=>question.id %></td>
     <td><%= link_to 'Delete', question, :confirm => 'Are you sure?', :method => :delete %></td>
+   <%else%>
+   <td>
+    <td><% #link_to 'Delete', question, :confirm => 'Are you sure?', :method => :delete %></td>
+   <%end%>  
+    
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New question', new_question_path %>
+<%= link_to 'New question', :action=>"new" %> <%= link_to 'View Added Questions', :action=>"index"%>
