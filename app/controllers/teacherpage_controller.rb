@@ -4,4 +4,9 @@ class TeacherpageController < ApplicationController
     
   end
 
-end
+  def publish
+     
+     Quiz.update(session[:quizid],:status=>"Published")
+     redirect_to :controller=>"quizzes", :action=>"index", :section=>session[:sectionid]
+  end
+end 

@@ -19,7 +19,7 @@
     <td><%=h quiz.name %></td>
     <td><%= link_to 'Add Questions', :controller=>"questions", :action=>"index", :quiz=>quiz%></td>
     <%if quiz.status="Unpublished"%>
-    <td><%= link_to 'Publish', edit_quiz_path(quiz) %></td>
+    <td><%= link_to 'Publish',:controller=>"teacherpage" ,:action=>"publish" ,:quiz=>quiz%></td>
     <td><%= link_to 'Delete', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
     <%end%>
    

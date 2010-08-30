@@ -20,7 +20,8 @@ class QuizzesController < ApplicationController
       format.xml  { render :xml => @quizzes }
     end
   end
-
+  
+  
   # GET /quizzes/1
   # GET /quizzes/1.xml
   def show
@@ -47,7 +48,9 @@ class QuizzesController < ApplicationController
   def edit
     @quiz = Quiz.find(params[:id])
   end
-
+  
+  
+  
   # POST /quizzes
   # POST /quizzes.xml
   def create
@@ -69,6 +72,7 @@ class QuizzesController < ApplicationController
   # PUT /quizzes/1
   # PUT /quizzes/1.xml
   def update
+    
     @quiz = Quiz.find(params[:id])
 
     respond_to do |format|
