@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(:version => 20100828054921) do
   create_table "questions", :force => true do |t|
     t.string   "question"
     t.string   "answer"
+    t.integer  "subject_id"
+    t.string   "difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
