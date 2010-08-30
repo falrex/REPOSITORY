@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-   if(params[:quiz]==nil)
+   if(params[:find]!=nil)
       @questions = Question.find_by_sql("select * from questions
           where question= any
             (SELECT question from questions
@@ -11,9 +11,10 @@ class QuestionsController < ApplicationController
               join quizzes
               on quizzes.id = quiz_id
               where quiz_id =
-              "+session[:quizid]+")")
-              
-   
+              "+params[:find]+")")
+         flash[:done]="yeah"  
+   elsif (params[:quiz]==nil)
+      @questions=Quiz.all        
    else
       session[:quizid]=params[:quiz]
       @questions = Question.find_by_sql("select * from questions

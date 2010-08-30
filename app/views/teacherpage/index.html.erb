@@ -1,17 +1,33 @@
-<h1>Teacherpage#index</h1>
+<h1>Homepage</h1>
 
 <p>Welcome 
-   <%=session[:fname]%>
+   <%=session[:fname]%>  <%= link_to 'Logout', :controller=>"teacherpage",:action=>"logout"%>
 </p>
 
 <table>
   <tr>
     <td>
-      Class Management
+      Subject Management
     </td>  
     <td>
       <%= link_to 'View Subjects', :controller=>"subjects"%>
     </td>
-        
+    
+  </tr>
+    <tr>
+    <td>    
+      Quiz Management
+    </td>
+    <td>
+      <%= link_to 'View Published Quizzes', :controller=>"quizzes"%>
+    </td>    
+  </tr>
+  <tr>
+    <td>    
+      Class Management
+    </td>
+    <td>
+      <%= link_to 'View Published Quizzes', :controller=>"quizzes"%>
+    </td>    
   </tr>
 </table>

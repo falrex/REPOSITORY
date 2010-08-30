@@ -2,25 +2,40 @@
 <p>
   <%= link_to 'Home', :controller=>"teacherpage" %> -> 
   <%= link_to "Subjects", :controller=>"subjects" %> -> 
-  <%= link_to flash[:subjectname], :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%> -> 
+  <%= link_to flash[:subjectname], :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%> 
   <%if (flash[:sectionname]!=nil)%>
-  <%=flash[:sectionname]+" "%>
+  -> <%=flash[:sectionname]+" "%>
   <%end%>
 </p>
 
 
 <table>
   <tr>
-    <th>Name</th>
+     <%if flash[:notice]!=nil%>
+    <th>Subject</th>
+    <th>Section</th>
+    <th>Quiz</th>
+    <%else%>
+    <th>Quiz</th>
+    <%end%>
   </tr>
 
 <% @quizzes.each do |quiz| %>
   <tr>
+    <%if quiz.status!="Unpublished"%>
+    <td><%=h quiz.subject %></td>
+    <td><%=h quiz.section %></td>
+    <td><%=h quiz.quiz %></td>
+    <%else%>
     <td><%=h quiz.name %></td>
+    <%end%>
+    
+    <%if quiz.status=="Unpublished"%>
     <td><%= link_to 'Add Questions', :controller=>"questions", :action=>"index", :quiz=>quiz%></td>
-    <%if quiz.status="Unpublished"%>
     <td><%= link_to 'Publish',:controller=>"teacherpage" ,:action=>"publish" ,:quiz=>quiz%></td>
     <td><%= link_to 'Delete', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%else%>
+    <td><%= link_to 'View Questions', :controller=>"questions", :action=>"index", :find=>quiz%></td>
     <%end%>
    
   </tr>

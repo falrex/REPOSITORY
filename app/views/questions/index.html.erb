@@ -1,12 +1,16 @@
 <h1>Listing questions</h1>
 
 <p>
+<%if(session[:quizid]=nil)%>  
   <%= link_to 'Home', :controller=>"teacherpage" %> -> 
   <%= link_to "Subjects", :controller=>"subjects" %> -> 
   <%= link_to flash[:subjectname], :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%> -> 
 
   <%= link_to flash[:sectionname], :controller=>"quizzes", :action=>"index", :subject=>session[:quizid]%>  -> 
   <%=flash[:subjectname]%>&nbsp Questions
+  <%else%>
+  <%= link_to 'Home', :controller=>"teacherpage" %> 
+<%end%>  
 </p>
  
 <table>
@@ -14,6 +18,7 @@
     <th>Difficulty</th>
     <th>Question</th>
     <th>Answer</th>
+    
   </tr>
 
 <% @questions.each do |question| %>
@@ -22,11 +27,15 @@
     <td><%=question.question%></td>
     <td><%=question.answer%></td>
    
-   <%
-   @publishquizzes=Publishquiz.find(:all,:conditions=>"question_id="+question.id.to_s+" and quiz_id="+session[:quizid])
+   <% if(session[:quizid]=nil)
+      @publishquizzes=Publishquiz.find(:all,:conditions=>"question_id="+question.id.to_s+" and quiz_id="+session[:quizid])
+      else
+      session[:quizid]=params[:find]
+      @publishquizzes=Publishquiz.find(:all,:conditions=>"question_id="+question.id.to_s+" and quiz_id="+session[:quizid])
+      end
    if(@publishquizzes.length<=0)
    %>
-       
+     <td><%=@sections.id%></td>  
     <td><%= link_to 'Add', :controller=>"teacherpage",:action=>"addquestions",:question=>question.id %></td>
     <td><%= link_to 'Delete', question, :confirm => 'Are you sure?', :method => :delete %></td>
    <%else%>
@@ -39,5 +48,8 @@
 </table>
 
 <br />
-
+<%if(@publishquizzes.length<=0)%>
 <%= link_to 'New question', :action=>"new" %> <%= link_to 'View Added Questions', :action=>"index"%>
+<%else%>
+<%= link_to 'Back', :controller=>"quizzes" %>
+<%end%>

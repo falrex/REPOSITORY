@@ -3,7 +3,12 @@ class TeacherpageController < ApplicationController
     #login= User.find(:all, :conditions=>"id='${session[:userid]}'"
     
   end
-
+  
+  def logout
+    reset_session
+    redirect_to :controller=>"login"
+  end
+  
   def publish
      
      Quiz.update(session[:quizid],:status=>"Published")

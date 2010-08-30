@@ -4,7 +4,14 @@ class QuizzesController < ApplicationController
   def index
    
     if(params[:section]==nil)
-       @quizzes = Quiz.all
+       @quizzes = Quiz.find_by_sql("SELECT quizzes.name as quiz,subjects.name as subject,section,status FROM `quizzes`
+join sections
+on sections.id = section_id
+join subjects
+on subjects.id = sections.subject_id
+where status='Published'")
+      flash[:notice]="not empty"
+      
    else
       session[:sectionid]=params[:section]
       @quizzes = Quiz.find(:all, :conditions=>"section_id = "+params[:section]+" and status='Unpublished'")
