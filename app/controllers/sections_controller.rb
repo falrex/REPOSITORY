@@ -4,8 +4,11 @@ class SectionsController < ApplicationController
   def index
    if(params[:subject]==nil)
       @sections = Section.all
+      
    else
-      session[:subjectid]=params[:subject]
+      session[:sectionid]=params[:subject]
+      
+      
       @sections = Section.find(:all, :conditions=>"subject_id = "+params[:subject]+" and user_id = "+session[:userid])
       @subject = Subject.find(:all,:conditions=>"id = "+params[:subject])
       flash[:subjectname]=@subject[0].name 
