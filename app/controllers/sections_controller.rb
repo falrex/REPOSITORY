@@ -6,7 +6,7 @@ class SectionsController < ApplicationController
       @sections = Section.all
       
    else
-      session[:sectionid]=params[:subject]
+      session[:subjectid]=params[:subject]
       
       
       @sections = Section.find(:all, :conditions=>"subject_id = "+params[:subject]+" and user_id = "+session[:userid])
@@ -37,7 +37,7 @@ class SectionsController < ApplicationController
   # GET /sections/new.xml
   def new
     @section = Section.new
-   session[:subjectid]=params[:subject]
+
     #@a = Subject.find(params[:subject])
     
     respond_to do |format|
