@@ -1,7 +1,7 @@
 <h1>Listing questions</h1>
 
 <p>
-<%if(session[:quizid]=nil)%>  
+<%if(params[:quiz]!=nil)%>  
   <%= link_to 'Home', :controller=>"teacherpage" %> -> 
   <%= link_to "Subjects", :controller=>"subjects" %> -> 
   <%= link_to flash[:subjectname], :controller=>"sections", :action=>"index", :subject=>session[:subjectid]%> -> 
@@ -27,7 +27,7 @@
     <td><%=question.question%></td>
     <td><%=question.answer%></td>
    
-   <% if(session[:quizid]=nil)
+   <% if(params[:quiz]!=nil)
       @publishquizzes=Publishquiz.find(:all,:conditions=>"question_id="+question.id.to_s+" and quiz_id="+session[:quizid])
       else
       session[:quizid]=params[:find]
@@ -35,7 +35,7 @@
       end
    if(@publishquizzes.length<=0)
    %>
-     <td><%=@sections.id%></td>  
+    
     <td><%= link_to 'Add', :controller=>"teacherpage",:action=>"addquestions",:question=>question.id %></td>
     <td><%= link_to 'Delete', question, :confirm => 'Are you sure?', :method => :delete %></td>
    <%else%>

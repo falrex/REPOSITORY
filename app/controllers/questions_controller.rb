@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   # GET /questions.xml
   def index
    if(params[:find]!=nil)
+     session[:quizid]=params[:find]
       @questions = Question.find_by_sql("select * from questions
           where question= any
             (SELECT question from questions
