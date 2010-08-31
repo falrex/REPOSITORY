@@ -7,7 +7,7 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %><br />
     
-    <%if (session[:id]==nil)%>
+    <%if (session[:subjectid]==nil)%>
       <%=f.label"Subject"%>
       <%=f.select :name, Subject.all.collect {|p| [ p.name, p.id ] }%> 
     <%end%>
