@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
               "+params[:find]+")")
          flash[:done]="yeah"  
    elsif (params[:quiz]==nil)
-      @questions=Quiz.all        
+      @questions=Question.all        
    else
       session[:quizid]=params[:quiz]
       @questions = Question.find_by_sql("select * from questions

@@ -48,8 +48,5 @@
 </table>
 
 <br />
-<%if(@publishquizzes.length<=0)%>
-<%= link_to 'New question', :action=>"new" %> <%= link_to 'View Added Questions', :action=>"index"%>
-<%else%>
-<%= link_to 'Back', :controller=>"quizzes" %>
-<%end%>
+
+<%= link_to 'New question', :action=>"new" %> <%= link_to 'View Added Questions', :action=>"index", :find=>session[:quizid]%>
