@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :password %><br />
-    <%= f.text_field :password %>
+    <%= f.password_field :password %>
   </p>
   <p>
     <%= f.label :fname %><br />
@@ -19,9 +19,11 @@
     <%= f.label :lname %><br />
     <%= f.text_field :lname %>
   </p>
+  <%if session[:usertype]=="Admin"%>
     <p>
     <%= f.label :category %><br />
     <%= f.text_field :category   %>
+  <%end%>
   </p>
   <p>
     <%= f.submit 'Update' %>

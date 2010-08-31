@@ -4,7 +4,11 @@ class SectionsController < ApplicationController
   def index
    if(params[:subject]==nil)
       @sections = Section.all
-      
+      @sections = Section.find_by_sql("SELECT * FROM `sections`
+join subjects
+on subjects.id = subject_id
+where user_id = 
+" + session[:userid])
    else
       session[:subjectid]=params[:subject]
       

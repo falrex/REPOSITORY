@@ -4,13 +4,13 @@ class QuizzesController < ApplicationController
   def index
    
     if(params[:section]==nil)
-       @quizzes = Quiz.find_by_sql("SELECT quizzes.name as quiz,subjects.name as subject,section,status FROM `quizzes`
+       @quizzes = Quiz.find_by_sql("SELECT quizzes.id as id,quizzes.name as quiz,subjects.name as subject,section,status FROM `quizzes`
 join sections
 on sections.id = section_id
 join subjects
 on subjects.id = sections.subject_id
 where status='Published'")
-      flash[:notice]="not empty"
+     
       
    else
       session[:sectionid]=params[:section]
@@ -66,7 +66,7 @@ where status='Published'")
     @quiz.status = "Unpublished"
     respond_to do |format|
       if @quiz.save
-        format.html { redirect_to(@quiz, :notice => 'Quiz was successfully created.') }
+        format.html { redirect_to(@quiz, :notice => 'Quiz was  successfully created.') }
         format.xml  { render :xml => @quiz, :status => :created, :location => @quiz }
       else
         format.html { render :action => "new" }

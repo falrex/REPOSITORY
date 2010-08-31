@@ -32,10 +32,12 @@
     
     <%if quiz.status=="Unpublished"%>
     <td><%= link_to 'Add Questions', :controller=>"questions", :action=>"index", :quiz=>quiz%></td>
+    <td><%= link_to 'Generate Questions', :controller=>"teacherpage", :action=>"generate", :quiz=>quiz%></td>
     <td><%= link_to 'Publish',:controller=>"teacherpage" ,:action=>"publish" ,:quiz=>quiz%></td>
     <td><%= link_to 'Delete', quiz, :confirm => 'Are you sure?', :method => :delete %></td>
     <%else%>
-    <td><%= link_to 'View Questions', :controller=>"questions", :action=>"index", :find=>quiz%></td>
+    <td><%= link_to 'View Questions', :controller=>"questions", :action=>"index", :find=>quiz.id%></td>
+    <td><%= link_to 'Close', :controller=>"teacherpage", :action=>"close", :quiz=>quiz.id%></td>
     <%end%>
    
   </tr>

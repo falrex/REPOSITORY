@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+
+  
   # GET /questions
   # GET /questions.xml
   def index
@@ -13,7 +15,7 @@ class QuestionsController < ApplicationController
               on quizzes.id = quiz_id
               where quiz_id =
               "+params[:find]+")")
-         flash[:done]="yeah"  
+         flash[:done]="yeah"     
    elsif (params[:quiz]==nil)
       @questions=Question.all        
    else
@@ -100,8 +102,12 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.xml
   def create
+    if (params[:question]!=nil)
     @question = Question.new(params[:question])
-    @question.subject_id=session[:subjectid]                 
+    @question.subject_id=session[:subjectid]       
+    else
+    @question = Question.new
+    end          
      
     respond_to do |format|
       if @question.save

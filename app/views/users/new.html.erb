@@ -21,7 +21,11 @@
     <%= f.hidden_field(:category,:value=>'Student')%>
   </p>
   <p>
+    <%if(session[:usertype]=="Student"or session[:usertype]=="Teacher")%>
+    <%= f.submit 'Create' %> &nbsp <%= link_to 'Back', :controller=>"login" %>
+    <%else%>
     <%= f.submit 'Create' %> &nbsp <%= link_to 'Back', users_path %>
+    <%end%>
   </p>
 <% end %>
 

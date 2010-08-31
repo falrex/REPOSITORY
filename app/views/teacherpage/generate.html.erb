@@ -1,0 +1,16 @@
+<h1>Generate Quiz</h1>
+Hard: <%=@hard%> &nbsp
+Moderate: <%=@moderate%>&nbsp
+Easy: <%=@easy%>&nbsp
+<% form_tag :action=>"generatequestion" do%>
+<table>
+<tr>
+    <td><%=label_tag "Difficulty"%></td>
+        
+    <td><%= select_tag( "dif","<option>Easy</option><option>Moderate</option><option>Hard</option>")%></td>
+    <td><%=submit_tag "Generate"%></td>
+    
+</tr>
+</table>  
+<%= link_to 'Add question', :controller=>"questions",:action=>"new" %> 
+<%end%>
