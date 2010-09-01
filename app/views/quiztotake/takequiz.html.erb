@@ -1,0 +1,29 @@
+<h1><%= flash[:subjectname] %> Quiz</h1>
+<p><%= link_to 'Home', :controller=>"teacherpage" %> -> <%= link_to "Subjects", :controller=>"subjects" %> -> <%= flash[:subjectname]%></p>
+
+<table>
+  <tr>
+    <th>Questions</th>
+  </tr>
+<% form_tag :action=>"answer" do%>
+<% @questions.each do |question| %>
+  <tr>
+    <td><%=h question.question %></td> 
+  
+  </tr>
+ <tr>
+<% @choices.each do |choice|%>
+<% if choice.question_id == question.id%>
+ <td>
+   <%=radio_button("post", question.id, choice.value)%>
+      <%=choice.value%></td>
+
+ <%end%>
+  <%end%>
+  </tr>
+<% end %>
+<tr><td><%=submit_tag "Submit"%></td></tr>
+
+
+<%end%>
+</table>

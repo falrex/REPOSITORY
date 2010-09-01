@@ -1,0 +1,8 @@
+<p> Your score is...</p><%=@score%> </br>
+<% if @score ==0%>
+<td>:P</td>
+<%end%>
+</br>
+<tr>
+  <td><%= link_to 'Home', :controller=>"quiztotake", :action=>"index"%></td>
+</tr>

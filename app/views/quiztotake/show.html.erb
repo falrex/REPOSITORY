@@ -1,0 +1,21 @@
+<h1><%= flash[:subjectname] %></h1>
+<p><%= link_to 'Home', :controller=>"teacherpage" %> -> <%= link_to "Subjects", :controller=>"subjects" %> -> <%= flash[:subjectname]%></p>
+
+<table>
+  <tr>
+    <th>Section</th>
+    <th>Time</th>
+    <th>Day</th>
+  </tr>
+
+<% @sections.each do |section| %>
+  <tr>
+    <td><%=h section.section %></td>
+    <td><%=h section.time %></td>
+    <td><%=h section.day %></td>
+    
+    <td><%= link_to 'Quizzes', :controller=>"quiztotake", :action=>"choosequiz",:section=>section%></td>
+
+  </tr>
+<% end %>
+</table>

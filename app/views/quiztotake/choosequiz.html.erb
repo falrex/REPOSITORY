@@ -1,0 +1,16 @@
+<h1>Quizzes</h1>
+<p><%= link_to 'Home', :controller=>"studentpage" %> -> Subjects</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @quiz.each do |quiz| %>
+  <tr>
+    <td><%=h quiz.name %></td>
+    <td><%= link_to 'Take Quiz', :controller=>"quiztotake", :action=>"takequiz",:quiz=>quiz%></td>
+
+  </tr>
+<% end %>
+</table>
