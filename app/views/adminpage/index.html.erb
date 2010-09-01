@@ -1,0 +1,15 @@
+<h1>Adminpage </h1>
+<p>
+  Hello Admin <%=session[:fname]%> <%= link_to 'Logout', :controller=>"teacherpage",:action=>"logout"%>
+</p>
+
+<table>
+  <tr>
+    <td>
+      User Management:
+    </td>
+    <td>
+      <%= link_to 'View Users', :controller=>"users" %>
+    </td>
+  </tr>
+</table>

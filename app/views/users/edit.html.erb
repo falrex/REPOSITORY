@@ -22,7 +22,7 @@
   <%if session[:usertype]=="Admin"%>
     <p>
     <%= f.label :category %><br />
-    <%= f.text_field :category   %>
+    <%= f.select( :category,  { "Student" => "Student", "Teacher" => "Teacher", "Admin" => "Admin"}) %>
   <%end%>
   </p>
   <p>

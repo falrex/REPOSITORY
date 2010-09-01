@@ -18,8 +18,17 @@
   <p>
     <%= f.label :lname %><br />
     <%= f.text_field :lname %>
-    <%= f.hidden_field(:category,:value=>'Student')%>
+    
   </p>
+  <p>
+    <%if (session[:usertype]=="Admin")%>
+    <%=f.label :category%>
+    <%= f.select( :category,  { "Student" => "Student", "Teacher" => "Teacher", "Admin" => "Admin"}) %>
+    <%else%>
+    <%= f.hidden_field(:category,:value=>'Student')%>
+    <%end%>
+    </p>
+  
   <p>
     <%if(session[:usertype]=="Student"or session[:usertype]=="Teacher")%>
     <%= f.submit 'Create' %> &nbsp <%= link_to 'Back', :controller=>"login" %>
