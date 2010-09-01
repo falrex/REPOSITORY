@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  before_filter :logincheck 
+  def logincheck
+    if (session[:userid]==nil)
+    redirect_to :controller=>"login", :action=>"index"
+    end
+  end
   # GET /users
   # GET /users.xml
   def index

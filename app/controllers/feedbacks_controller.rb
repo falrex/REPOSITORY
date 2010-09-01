@@ -1,4 +1,11 @@
 class FeedbacksController < ApplicationController
+  before_filter :logincheck 
+  def logincheck
+    if (session[:userid]==nil)
+    redirect_to :controller=>"login", :action=>"index"
+    end
+  end
+  
   # GET /feedbacks
   # GET /feedbacks.xml
   def index

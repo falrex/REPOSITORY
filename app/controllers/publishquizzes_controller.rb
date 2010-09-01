@@ -1,4 +1,10 @@
 class PublishquizzesController < ApplicationController
+       before_filter :logincheck 
+  def logincheck
+    if (session[:userid]==nil)
+    redirect_to :controller=>"login", :action=>"index"
+    end
+  end
   # GET /publishquizzes
   # GET /publishquizzes.xml
   def index

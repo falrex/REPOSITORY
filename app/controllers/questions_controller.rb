@@ -1,5 +1,10 @@
 class QuestionsController < ApplicationController
-
+  before_filter :logincheck 
+  def logincheck
+    if (session[:userid]==nil)
+    redirect_to :controller=>"login", :action=>"index"
+    end
+  end
   
   # GET /questions
   # GET /questions.xml

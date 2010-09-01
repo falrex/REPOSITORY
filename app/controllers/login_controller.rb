@@ -1,6 +1,6 @@
 class LoginController < ApplicationController
   def index
-
+reset_session
   
 
   
@@ -22,7 +22,7 @@ class LoginController < ApplicationController
       if (login[0].category== "Teacher")
         redirect_to :controller=>"teacherpage"
       elsif (login[0].category == "Admin")
-        redirect_to :controller=>"users", :action=>"index"        
+        redirect_to :controller=>"adminpage", :action=>"index"        
       elsif (login[0].category == "Student")
         redirect_to :controller=>"studentpage"
       end

@@ -1,4 +1,11 @@
 class ChoicesController < ApplicationController
+  
+  before_filter :logincheck 
+  def logincheck
+    if (session[:userid]==nil)
+    redirect_to :controller=>"login", :action=>"index"
+    end
+  end
   # GET /choices
   # GET /choices.xml
   def index
