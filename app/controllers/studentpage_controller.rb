@@ -6,7 +6,7 @@ class StudentpageController < ApplicationController
     end
   end
   def index
-    #login= User.find(:all, :conditions=>"id='${session[:userid]}'"
+    #login= User.find(:all, :conditions=>"id='${session[:userid]}'"saasa
     
   end
 
