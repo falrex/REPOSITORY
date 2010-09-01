@@ -81,4 +81,17 @@ class QuiztotakeController < ApplicationController
      # session[:quizid]= params[:quizid]
       #@choices = Choice.all
   end
+  
+  def grades
+    @studentrecords = Studentrecord.find_by_sql("SELECT quizzes.name,grade,count(question_id) as total FROM `studentrecords`
+    join quizzes
+    on quizzes.id = studentrecords.quiz_id
+    join sections
+    on sections.id = quizzes.section_id
+    join subjects
+    on subjects.id = sections.subject_id
+    join publishquizzes
+    on publishquizzes.quiz_id = quizzes.id
+    where studentrecords.user_id = "+ session[:userid]+" group by subjects.id") 
+  end
 end

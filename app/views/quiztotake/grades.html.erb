@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <th>Quiz</th>
+    <th>Grade</th>
+    <th>Total</th>
+  </tr>
+  
+<% @studentrecords.each do |record| %>
+  <tr>
+    <td><%=h record.name %></td>
+    <td><%=h record.grade%></td>
+    <td><%=h record.total%></td>
+  
+  </tr>
+ <tr>
+   <tr>
+     <td><%= link_to 'Home', :controller=>"studentpage", :action=>"index"%></td>
+   </tr>
+
+
+<%end%>
+</table>
