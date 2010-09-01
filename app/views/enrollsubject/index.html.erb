@@ -1,0 +1,17 @@
+<h1>Subject Lists</h1>
+<p><%= link_to 'Home', :controller=>"teacherpage" %> -> Subjects</p>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @subjects.each do |subject| %>
+  <tr>
+    <td><%=h subject.name %></td>
+    <td><%=h subject.description %></td>
+    <td><%= link_to 'View Sections', :controller=>"enrollsubject", :action=>"select",:subject=>subject%></td>
+
+  </tr>
+<% end %>
+</table>
