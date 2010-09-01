@@ -61,7 +61,7 @@ class QuiztotakeController < ApplicationController
       @score = 0
       @q.each do |q|
         if( params[:post][q.id.to_s]==q.answer)
-          @score=score+1
+          @score=@score+1
         end
       end
       
@@ -83,7 +83,7 @@ class QuiztotakeController < ApplicationController
   end
   
   def grades
-    @studentrecords = Studentrecord.find_by_sql("SELECT quizzes.name,grade,count(question_id) as total FROM `studentrecords`
+    @studentrecords = Studentrecord.find_by_sql("SELECT subjects.name,grade,count(question_id) as total FROM `studentrecords`
     join quizzes
     on quizzes.id = studentrecords.quiz_id
     join sections
