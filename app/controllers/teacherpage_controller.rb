@@ -57,4 +57,8 @@ class TeacherpageController < ApplicationController
      redirect_to :controller=>"quizzes", :action=>"index"
      
   end
+  
+  def viewgrades
+    
+  end
 end 
