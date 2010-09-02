@@ -77,7 +77,7 @@ class QuiztotakeController < ApplicationController
   def choosequiz
     @quiz = Quiz.find_by_sql("select * from quizzes 
     WHERE quizzes.id != all(select quiz_id from studentrecords 
-    where user_id = " + session[:userid] +") and quizzes.section_id = " + params[:section])
+    where user_id = " + session[:userid] +") and quizzes.section_id = " + params[:section] + " and quizzes.status='Published'")
      # session[:quizid]= params[:quizid]
       #@choices = Choice.all
   end

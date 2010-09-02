@@ -15,7 +15,11 @@
     <td><%=h section.day %></td>
     
     <td><%= link_to 'Add Quiz', :controller=>"quizzes", :action=>"new",:section=>section%></td>
-    <td><%= link_to 'View Quizzes', :controller=>"quizzes", :action=>"index",:section=>section%></td>    
+    <%if (params[:subject]!=nil)%>
+    <td><%= link_to 'View Quizzes', :controller=>"quizzes", :action=>"index",:section=>section%></td>
+    <%else%>    
+    <td><%= link_to 'View Grades', :controller=>"teacherpage", :action=>"grades",:section=>section%></td>
+    <%end%>
     <td><%= link_to 'Delete', section, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

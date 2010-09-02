@@ -58,7 +58,17 @@ class TeacherpageController < ApplicationController
      
   end
   
-  def viewgrades
-    
+  def grades
+    @grades = Studentrecord.find_by_sql("select fname,lname,grade,quizzes.name as quizname,count(question_id) as total from studentrecords
+join quizzes
+on quizzes.id = studentrecords.quiz_id
+join sections
+on sections.id = quizzes.section_id
+join users
+on users.id = studentrecords.user_id
+join publishquizzes
+on publishquizzes.quiz_id = quizzes.id
+where sections.id =6
+group by users.id")
   end
 end 
